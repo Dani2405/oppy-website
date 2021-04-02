@@ -1,0 +1,171 @@
+@import url(./normalize.css);
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/MaterialIcons/MaterialIcons-Regular.woff2) format('woff2'), url(../fonts/MaterialIcons/MaterialIcons-Regular.woff) format('woff'), url(../fonts/MaterialIcons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "LaoSangam";
+  src: url("../fonts/Lao Sangam MN.ttf");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: .1rem;
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  color: #ffffff;
+  --background-color: #1d1d1d;
+  --element-color: #272727;
+  --line-color: #70213F;
+  --link-color: #9d9d9d;
+  --link-color-hover: #FFF;
+  --border-width-button: 4px;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Manjari', sans-serif;
+  color: #808080;
+}
+
+h1 {
+  font-size: 8rem;
+  margin: 0;
+  padding: 50px 0 0 50px;
+  text-align: left;
+}
+
+h3 {
+  font-size: 5rem;
+  margin: 0;
+  padding-top: 50px;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+a {
+  color: #F1316C;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-item-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+#errorCode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-item-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  align-items: center;
+  margin: 0 50px 0 50px;
+  width: 80%;
+  margin: auto;
+}
+
+#error404 {
+  height: 100%;
+  width: 60%;
+}
+
+.cloud {
+  height: 50%;
+  width: 20%;
+  position: relative;
+}
+
+#leftCloud {
+  left: 10%;
+  top: 50px;
+  opacity: 0.8;
+}
+
+#rightCloud {
+  z-index: -1;
+  right: 15%;
+  bottom: 50px;
+  opacity: 0.8;
+}
+
+#errorMessage {
+  height: 50%;
+}
+
+@media only screen and (max-width: 480px) {
+  #error404 {
+    width: 100%;
+  }
+
+  #errorCode {
+    margin: 4rem auto;
+  }
+
+  .cloud {
+    width: 30%;
+  }
+
+  #leftCloud {
+    left: 30%;
+  }
+
+  #rightCloud {
+    right: 30%;
+  }
+
+  h1 {
+    padding: unset;
+    padding-left: 2rem;
+    font-size: 4rem;
+  }
+
+  #errorMessage {
+    padding: 1rem 0 0;
+    height: unset;
+  }
+
+  h3 {
+    font-size: 2rem;
+    padding: 0 .8rem .8rem;
+  }
+
+  a {
+    font-size: 20px;
+  }
+}
