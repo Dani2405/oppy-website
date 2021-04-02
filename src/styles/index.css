@@ -10,7 +10,6 @@
 # Content
     ## Home
     ## About
-    ## Projects
     ## Contact
 # Footer
 # Media
@@ -35,17 +34,17 @@
 }
 
 @font-face {
-  font-family: "Comfortaa"; /*LaoSangam*/
+  font-family: "Comfortaa";
   src: url("../fonts/Comfortaa-VariableFont_wght.ttf");
 }
 
 @font-face {
-  font-family: "Anton"; /* Anton */
+  font-family: "Anton";
   src: url("../fonts/Anton-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Arial Black"; /* Arial Black */
+  font-family: "Arial Black";
   src: url("../fonts/ariblk.ttf");
 }
 
@@ -818,23 +817,6 @@ footer img {
   }
 }
 
-@media only screen and (max-width: 1000px) and (orientation: landscape) {
-  .solution img {
-    width: 120px;
-  }
-}
-
-@media only screen and (max-width: 950px) and (orientation: portrait) {
-  #solutionsList {
-    display: block;
-
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
 @media only screen and (max-width: 950px) {
   /* # Header */
 
@@ -926,20 +908,11 @@ footer img {
   footer h2 {
     font-size: 1rem;
   }
-
-  .projectCard {
-    max-height: calc(100vh - var(--header-small-height) - 60px);
-    height: auto;
-  }
 }
 
 @media only screen and (max-width: 320px) {
   section > .section-title {
     margin: 0 auto;
-    float: none;
-  }
-
-  #projects > .section-title {
     float: none;
   }
 

@@ -6,16 +6,11 @@ const hamburger = header.querySelector("#hamburger");
 const ctaTitle = document.querySelector("#cta-title");
 const ctaButton = document.querySelector("#cta-btn");
 const sections = document.querySelectorAll("section");
-const leftArrow = document.querySelector("#scrollProjectLeft");
-const rightArrow = document.querySelector("#scrollProjectRight");
 const contactSection = document.querySelector("#contact");
 const contactForm = document.querySelector("#contactForm");
 const contactFormStatus = document.querySelector("#contactFormStatus");
 const upButton = document.querySelector("#up-button");
-const footer = document.querySelector("footer");
 const smallHeaderHeight = 70;
-
-const smallLogo = "src/images/header.png";
 
 const hideClass = "hide";
 
@@ -23,10 +18,6 @@ const headerMobileNavStyleClass = "header-mobile-nav";
 const headerMobileOpenNavStyleClass = "header-mobile-nav-open";
 
 let mobileDevice;
-
-let drag;
-let startY;
-let startHeight;
 
 let changeHeaderHeightScrollPosition = 20;
 
@@ -359,7 +350,6 @@ headerNav.addEventListener("click", closeMenu);
 
 upButton.addEventListener("click", scrollToTop);
 headerLogo.addEventListener("click", scrollToTop);
-ctaButton.addEventListener("click", () => scrollToPosition(contactSection, 800));
 
 window.addEventListener(
   "scroll",
