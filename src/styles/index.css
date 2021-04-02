@@ -9,6 +9,7 @@
     ## Custom Select
 # Content
     ## Home
+    ## Product
     ## About
     ## Contact
 # Footer
@@ -526,10 +527,10 @@ section h4:first-child {
   margin-top: 0;
 }
 
-section p {
+section p, section li {
   font-weight: 100;
   font-size: 24px;
-  line-height: 1.5rem;
+  line-height: 1.5;
   margin-top: 0;
 }
 
@@ -628,6 +629,44 @@ hr {
 
 #cta-subtitle {
   font-size: 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Product
+--------------------------------------------------------------*/
+
+#product {
+  margin: 75px 0;
+}
+
+#product img {
+  width: 60%;
+  height: fit-content;
+}
+
+#product img:first-child {
+  border-radius: 15px;
+}
+
+#product img:nth-child(2) {
+  margin-top: 50px;
+}
+
+#product-content-top {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+#product-content-bottom {
+  display: flex;
+}
+
+#product-content-top-text h1 {
+  margin-top: 10px;
+}
+
+#product-content-top-text {
+  padding-left: 50px;
 }
 
 /*--------------------------------------------------------------
