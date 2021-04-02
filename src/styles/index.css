@@ -38,16 +38,6 @@
   src: url("../fonts/Comfortaa-VariableFont_wght.ttf");
 }
 
-@font-face {
-  font-family: "Anton";
-  src: url("../fonts/Anton-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Arial Black";
-  src: url("../fonts/ariblk.ttf");
-}
-
 :root {
   --primary: white;
   --secondary: white;
