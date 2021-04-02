@@ -536,9 +536,10 @@ section p, section li {
 
 hr {
   border: none;
-  width: 75%;
-  height: 1px;
-  background: white;
+  width: 60%;
+  height: 3px;
+  border-radius: 10px;
+  background: #14181B;
 }
 
 #up-button {
