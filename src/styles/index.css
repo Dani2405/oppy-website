@@ -725,7 +725,7 @@ form {
 }
 
 #contactFormButton {
-  float: right;
+  float: left;
   width: calc(120px - 2 * var(--border-width-button));
   height: 50px;
   line-height: 45px;
@@ -877,6 +877,10 @@ footer img {
 }
 
 @media only screen and (max-width: 480px) {
+  .header-container__right {
+    flex-direction: row-reverse;
+  }
+
   hr {
     margin-bottom: 3rem;
   }
@@ -893,6 +897,18 @@ footer img {
 
   #up-button {
     display: none;
+  }
+
+  #form-container img {
+    display: none;
+  }
+
+  #form-container {
+    justify-content: center;
+  }
+
+  #form-container input[type=submit] {
+    width: 100%;
   }
 
   footer h2 {
