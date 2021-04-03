@@ -658,12 +658,16 @@ hr {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: space-between;
   -ms-flex-item-align: center;
   align-self: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   width: 100%;
+}
+
+#form-container img {
+  width: 30%;
 }
 
 form {
@@ -683,13 +687,14 @@ form {
 }
 
 .form-input {
-  background-color: white;
-  border: none;
-  border-radius: 5px;
+  background-color: #14181b;
+  border: 0;
+  border-bottom: 1px solid #323d44;
+  border-radius: 5px 5px 0 0;
   outline: none;
   height: 50px;
   line-height: 50px;
-  color: black;
+  color: white;
   padding: 0 1rem;
 }
 
@@ -731,6 +736,7 @@ form {
   color: white;
   font-weight: bold;
   letter-spacing: 2px;
+  border-radius: 5px;
 }
 
 #contactFormButton:hover {
