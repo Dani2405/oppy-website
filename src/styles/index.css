@@ -698,12 +698,16 @@ hr {
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: space-between;
   -ms-flex-item-align: center;
   align-self: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   width: 100%;
+}
+
+#form-container img {
+  width: 30%;
 }
 
 form {
@@ -723,13 +727,14 @@ form {
 }
 
 .form-input {
-  background-color: white;
-  border: none;
-  border-radius: 5px;
+  background-color: #14181b;
+  border: 0;
+  border-bottom: 1px solid #323d44;
+  border-radius: 5px 5px 0 0;
   outline: none;
   height: 50px;
   line-height: 50px;
-  color: black;
+  color: white;
   padding: 0 1rem;
 }
 
@@ -760,7 +765,7 @@ form {
 }
 
 #contactFormButton {
-  float: right;
+  float: left;
   width: calc(120px - 2 * var(--border-width-button));
   height: 50px;
   line-height: 45px;
@@ -771,6 +776,7 @@ form {
   color: white;
   font-weight: bold;
   letter-spacing: 2px;
+  border-radius: 5px;
 }
 
 #contactFormButton:hover {
@@ -911,6 +917,10 @@ footer img {
 }
 
 @media only screen and (max-width: 480px) {
+  .header-container__right {
+    flex-direction: row-reverse;
+  }
+
   hr {
     margin-bottom: 3rem;
   }
@@ -927,6 +937,18 @@ footer img {
 
   #up-button {
     display: none;
+  }
+
+  #form-container img {
+    display: none;
+  }
+
+  #form-container {
+    justify-content: center;
+  }
+
+  #form-container input[type=submit] {
+    width: 100%;
   }
 
   footer h2 {
