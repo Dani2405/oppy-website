@@ -750,6 +750,7 @@ form {
 #contactFormStatus {
   clear: both;
   padding-top: 10px;
+  height: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -863,23 +864,6 @@ footer img {
 
   #cta-subtitle {
     font-size: 18px;
-  }
-
-  #product img {
-    width: 100%;
-  }
-
-  #product img:first-child {
-    margin-bottom: 25px;
-  }
-
-  #product-content-top, #product-content-bottom {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #product-content-top-text {
-    padding: 0;
   }
 
   #sub-footer {
