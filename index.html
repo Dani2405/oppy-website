@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  <!-- Load the JavaScript API for reCAPTCHA v2  -->
+  <script type="text/javascript">
+    function loadCaptcha() {
+      grecaptcha.render('reCAPTCHA', {
+        'sitekey' : '6LfRIpwaAAAAAKXm_3qBpnTLOTd_MRJT8Xx7Lpvk'
+      });
+    };
+  </script>
 
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
@@ -108,25 +116,23 @@
   <div class="section-container">
     <section class="flex-column" id="product">
       <h3 class="section-title">Product</h3>
-      <div id="product-content-top">
+      <div class="product-content" id="product-content-top">
         <img src="./src/images/product/product.jpg">
-        <div id="product-content-top-text">
+        <div class="product-content-text" id="product-content-top-text">
           <h1>What does it consist in?</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate felis nec augue ultricies ullamcorper. Suspendisse potenti. Phasellus finibus justo quam, vitae ornare massa molestie vel. Phasellus ut felis vel risus aliquet interdum sed in nisl. Pellentesque convallis fringilla pharetra. Mauris quis eros egestas, ullamcorper neque eget, pellentesque nibh. Morbi iaculis, ligula vel semper porta, ante ex dictum nunc, non porta quam nulla ac lectus. Mauris quis eros egestas, ullamcorper neque eget, pellentesque nibh. Morbi iaculis, ligula vel semper porta, ante ex dictum nunc, non porta quam nulla ac lectus.
+
           </p>
         </div>
       </div>
-      <div id="product-content-bottom">
-        <div id="product-content-bottom-text">
-          <h1>What does it consist in?</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate felis nec augue ultricies ullamcorper. Suspendisse potenti. Phasellus finibus justo quam, vitae ornare massa molestie vel. Phasellus ut felis vel risus aliquet interdum sed in nisl. Pellentesque convallis fringilla pharetra. Mauris quis eros egestas, ullamcorper neque eget, pellentesque nibh. Morbi iaculis, ligula vel semper porta, ante ex dictum nunc, non porta quam nulla ac lectus.
-          </p>
+      <div class="product-content" id="product-content-bottom">
+        <div class="product-content-text" id="product-content-bottom-text">
+          <h1>How does it work?</h1>
+          <p></p>
 
           <br>
 
-          <h2>What does it consist in?</h2>
+          <h2>What makes it special?</h2>
           <ul>
             <li>Suspendisse potenti.</li>
             <li>Suspendisse potenti.</li>
@@ -136,7 +142,7 @@
           <br>
 
           <p>
-            Donec vulputate felis nec augue ultricies ullamcorper. Suspendisse potenti. Phasellus finibus justo quam, vitae ornare massa molestie vel.
+
           </p>
 
         </div>
@@ -162,7 +168,7 @@
     <section class="flex-column" id="contact">
       <h3 class="section-title" data-i18n="contact.title"></h3>
       <div class="section-content" id="form-container">
-        <form action="https://formspree.io/xwkqwoeq" id="contactForm" method="POST">
+        <form action="https://formspree.io/" id="contactForm" method="POST">
           <div class="form-field">
             <div class="input-title">
               <svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -180,10 +186,10 @@
               </svg>
               <label data-i18n="contact.message" for="message"></label>
             </div>
-            <textarea autocomplete="off" class="form-input" id="message" name="message" required type="text"></textarea>
+            <textarea autocomplete="off" class="form-input" id="message" name="message" required type="text" onfocus="loadCaptcha()"></textarea>
           </div>
-
           <input name="_subject" type="hidden" value="Contact Form"/>
+          <div class="g-recaptcha" id="reCAPTCHA"></div>
           <input class="form-input" data-i18n="contact.send" id="contactFormButton" type="submit">
           <p id="contactFormStatus"></p>
         </form>
@@ -235,6 +241,7 @@
 
 <!-- Javascript -->
 <script src="src/scripts/script.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </body>
 
 </html>
