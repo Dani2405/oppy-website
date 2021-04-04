@@ -318,7 +318,7 @@ contactForm.addEventListener("submit", function (ev) {
 
   const data = JSON.stringify(Object.fromEntries(new FormData(contactForm)));
 
-  fetch("https://formspree.io/xwkqwoeq", {
+  fetch("https://formspree.io/f/xzbybdnr", {
     method: "POST",
     body: data,
     headers: {
