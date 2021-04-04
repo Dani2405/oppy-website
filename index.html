@@ -4,7 +4,7 @@
 <head>
   <!-- Load the JavaScript API for reCAPTCHA v2  -->
   <script type="text/javascript">
-    function loadCaptcha() {
+    var onloadCallback = function() {
       grecaptcha.render('reCAPTCHA', {
         'sitekey' : '6LfRIpwaAAAAAKXm_3qBpnTLOTd_MRJT8Xx7Lpvk'
       });
@@ -94,12 +94,8 @@
           <button class="option" value="ES">ES</button>
         </div>
       </div>
-
     </div>
-
-
   </div>
-
 </header>
 
 <div id="home">
@@ -107,6 +103,8 @@
       <div id="cta-text-container">
         <h1 id="cta-title">Share your opinion with the world!</h1>
         <p id="cta-subtitle">See what everyone REALLY thinks</p>
+        <button class="cta-btn" onclick=' window.open("https://www.indiegogo.com/projects/oppy","_blank")' data-i18n="cta.button">
+        </button>
       </div>
       <img alt="Preview" draggable="false" src="./src/images/home/home.png">
   </div>
@@ -168,7 +166,7 @@
     <section class="flex-column" id="contact">
       <h3 class="section-title" data-i18n="contact.title"></h3>
       <div class="section-content" id="form-container">
-        <form action="https://formspree.io/" id="contactForm" method="POST">
+        <form action="https://formspree.io/f/xzbybdnr" id="contactForm" method="POST">
           <div class="form-field">
             <div class="input-title">
               <svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -186,10 +184,10 @@
               </svg>
               <label data-i18n="contact.message" for="message"></label>
             </div>
-            <textarea autocomplete="off" class="form-input" id="message" name="message" required type="text" onfocus="loadCaptcha()"></textarea>
+            <textarea autocomplete="off" class="form-input" id="message" name="message" required type="text"></textarea>
           </div>
           <input name="_subject" type="hidden" value="Contact Form"/>
-          <div class="g-recaptcha" id="reCAPTCHA"></div>
+          <div class="g-recaptcha" id="reCAPTCHA" data-theme="dark"></div>
           <input class="form-input" data-i18n="contact.send" id="contactFormButton" type="submit">
           <p id="contactFormStatus"></p>
         </form>

@@ -626,10 +626,32 @@ hr {
 
 #cta-title {
   font-size: 3em;
+  margin: 0;
 }
 
 #cta-subtitle {
   font-size: 1.5em;
+}
+
+.cta-btn,
+ #contactFormButton {
+   width: 300px;
+   border: var(--border-width-button) solid transparent;
+   cursor: pointer;
+   text-transform: uppercase;
+   background: #00A1E7;
+   color: white;
+   font-weight: bold;
+   letter-spacing: 2px;
+   border-radius: 5px;
+   margin-top: 1rem;
+   outline: none;
+   height: 70px;
+ }
+
+.cta-btn:hover,
+#contactFormButton:hover {
+  background: #42D2FF;
 }
 
 /*--------------------------------------------------------------
@@ -776,18 +798,16 @@ form {
   width: calc(120px - 2 * var(--border-width-button));
   height: 50px;
   line-height: 45px;
-  border: var(--border-width-button) solid transparent;
-  cursor: pointer;
-  text-transform: uppercase;
-  background: #00A1E7;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 2px;
-  border-radius: 5px;
 }
 
-#contactFormButton:hover {
-  background: #42D2FF;
+.g-recaptcha {
+  margin-bottom: 1rem;
+}
+
+#contactFormStatus {
+  clear: both;
+  padding-top: 10px;
+  height: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -926,6 +946,12 @@ footer img {
     height: 100px;
     align-items: flex-end;
   }
+
+  button.cta-btn {
+    width: 200px;
+    font-size: 12px;
+    height: 50px;
+  }
 }
 
 @media (orientation: landscape) and (max-width: 850px) {
@@ -941,6 +967,22 @@ footer img {
 
   hr {
     margin-bottom: 3rem;
+  }
+
+  #cta-container {
+    flex-direction: column-reverse;
+  }
+
+  #cta-container img {
+    align-self: center;
+    margin-bottom: 2rem;
+    margin-left: 1.2rem;
+    width: 70%;
+    height: fit-content;
+  }
+
+  button.cta-btn {
+    width: 100%;
   }
 
   section p {
@@ -974,7 +1016,18 @@ footer img {
   }
 }
 
+@media only screen and (max-width: 375px) {
+  #cta-container img {
+    width: 60%;
+    margin-bottom: 1rem;
+  }
+}
+
 @media only screen and (max-width: 360px) {
+  #cta-container img {
+    display: none;
+  }
+
   footer h2 {
     font-size: 1rem;
   }
