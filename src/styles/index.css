@@ -913,6 +913,10 @@ footer img {
     height: fit-content;
   }
 
+  button.cta-btn {
+    width: 100%;
+  }
+
   section p {
     font-size: 18px;
   }
