@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  <!-- Load the JavaScript API for reCAPTCHA v2  -->
+  <script type="text/javascript">
+    var onloadCallback = function() {
+      grecaptcha.render('reCAPTCHA', {
+        'sitekey' : '6LfRIpwaAAAAAKXm_3qBpnTLOTd_MRJT8Xx7Lpvk'
+      });
+    };
+  </script>
 
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
@@ -149,8 +157,8 @@
             </div>
             <textarea autocomplete="off" class="form-input" id="message" name="message" required type="text"></textarea>
           </div>
-
           <input name="_subject" type="hidden" value="Contact Form"/>
+          <div class="g-recaptcha" id="reCAPTCHA" data-theme="dark"></div>
           <input class="form-input" data-i18n="contact.send" id="contactFormButton" type="submit">
           <p id="contactFormStatus"></p>
         </form>
@@ -202,6 +210,7 @@
 
 <!-- Javascript -->
 <script src="src/scripts/script.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </body>
 
 </html>
