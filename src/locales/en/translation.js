@@ -12,10 +12,11 @@ window.languages.english = {
     "title4": "Need a logo?",
     "title5": "Need an artwork?",
     "subtitle": "Contact us to get your business started right away!",
-    "button": "Work with us!"
+    "button": "BACK OUR PROJECT"
   },
   "product": {
-    "title": "Product"
+    "title": "Product",
+    "download": "Download"
   },
   "about": {
     "title": "About",
