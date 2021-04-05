@@ -9,6 +9,7 @@
     ## Custom Select
 # Content
     ## Home
+    ## Product
     ## About
     ## Contact
 # Footer
@@ -28,9 +29,9 @@
   src: url(../fonts/MaterialIcons/MaterialIcons-Regular.eot);
   /* For IE6-8 */
   src: local("Material Icons"), local("MaterialIcons-Regular"),
-    url(../fonts/MaterialIcons/MaterialIcons-Regular.woff2) format("woff2"),
-    url(../fonts/MaterialIcons/MaterialIcons-Regular.woff) format("woff"),
-    url(../fonts/MaterialIcons/MaterialIcons-Regular.ttf) format("truetype");
+  url(../fonts/MaterialIcons/MaterialIcons-Regular.woff2) format("woff2"),
+  url(../fonts/MaterialIcons/MaterialIcons-Regular.woff) format("woff"),
+  url(../fonts/MaterialIcons/MaterialIcons-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -120,6 +121,7 @@ img {
 ::selection {
   background: rgba(0, 0, 0, 0.35);
 }
+
 ::-moz-selection {
   background: var(--primary);
 }
@@ -504,11 +506,11 @@ section a {
   font-size: 72px;
   background: -o-linear-gradient(left, var(--primary) 25%, var(--secondary) 100%);
   background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(25%, var(--primary)),
-    to(var(--secondary))
+          linear,
+          left top,
+          right top,
+          color-stop(25%, var(--primary)),
+          to(var(--secondary))
   );
   background: linear-gradient(to right, var(--primary) 25%, var(--secondary) 100%);
   background-clip: text;
@@ -526,18 +528,27 @@ section h4:first-child {
   margin-top: 0;
 }
 
-section p {
-  font-weight: 100;
+section p, section li {
+  font-weight: 200;
   font-size: 24px;
-  line-height: 1.5rem;
+  line-height: 1.5;
   margin-top: 0;
+}
+
+section li {
+  margin: 5px 0;
 }
 
 hr {
   border: none;
-  width: 75%;
-  height: 1px;
-  background: white;
+  width: 60%;
+  height: 3px;
+  border-radius: 10px;
+  background: #14181B;
+}
+
+.strike-through {
+  text-decoration-line: line-through;
 }
 
 #up-button {
@@ -565,11 +576,11 @@ hr {
 
 #up-button:hover {
   background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(var(--primary)),
-    to(var(--secondary))
+          linear,
+          left top,
+          right top,
+          from(var(--primary)),
+          to(var(--secondary))
   );
   background: -o-linear-gradient(left, var(--primary), var(--secondary));
   background: linear-gradient(to right, var(--primary), var(--secondary));
@@ -620,7 +631,8 @@ hr {
 #cta-text-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;}
+  justify-content: center;
+}
 
 #cta-title {
   font-size: 3em;
@@ -650,6 +662,176 @@ hr {
 .cta-btn:hover,
 #contactFormButton:hover {
   background: #42D2FF;
+}
+
+.cta-btn::after {
+  content: "🥳";
+  font-size: 22px;
+  margin-left: 5px;
+}
+
+/*--------------------------------------------------------------
+## Product
+--------------------------------------------------------------*/
+
+#product {
+  margin: 75px 0;
+}
+
+.product-content img {
+  width: 50%;
+  height: fit-content;
+}
+
+.product-content img:nth-child(2) {
+  align-self: center;
+}
+
+.product-content {
+  display: flex;
+}
+
+#product-content-top img:first-child {
+  border-radius: 15px;
+  margin-right: 60px;
+}
+
+#product-content-top {
+  margin-bottom: 60px;
+}
+
+#product-content-bottom {
+}
+
+.product-content-text {
+  width: 100%;
+}
+
+.product-content-text ul li {
+  font-size: 20px;
+}
+
+#product-content-top-text h1 {
+  margin-top: 10px;
+}
+
+#product-content-top-text {
+}
+
+#product-content-bottom-text h1 {
+  margin-top: 0;
+}
+
+#track-opinion-text {
+  text-align: center;
+}
+
+#track-opinion {
+  background: white;
+  width: 100%;
+  padding: 25px 50px;
+  border-radius: 0px 0px 10px 10px;
+  margin-bottom: 60px;
+}
+
+#track-bars {
+  display: flex;
+}
+
+.track-bar {
+  width: 50%;
+  height: 8px;
+  background: #DCDCDC;
+  border-radius: 5px;
+}
+
+.track-text {
+  font-size: 14px;
+  text-align: center;
+}
+
+#track-vs-text {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  color: #636363;
+  margin-bottom: 5px;
+}
+
+#track-vs-text * {
+  width: 33%;
+}
+
+#track-vs-text *:first-child {
+  text-align: left;
+  font-size: 12px;
+}
+
+#track-vs-text *:last-child {
+  text-align: right;
+  font-size: 12px;
+}
+
+#track-vs {
+  font-size: 14px;
+}
+
+#track-agree {
+  background: #53CC84;
+  border-radius: 5px 0 0 5px;
+  width: 69%;
+  height: inherit;
+  float: right;
+}
+
+#track-disagree {
+  background: #42D2FF;
+  border-radius: 0 5px 5px 0;
+  width: 31%;
+  height: inherit;
+}
+
+.track-result {
+  color: #53CC84;
+  text-align: center;
+  font-weight: bold;
+}
+
+#track-perc {
+  margin: 10px;
+  font-size: 22px;
+}
+
+#download {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+}
+
+#download h4 {
+  margin: 0;
+  padding-top: 20px;
+}
+
+#downloadBox {
+  width: 60%;
+  margin-top: 45px;
+  border: 3px solid #4e4e4e;
+  border-radius: 25px;
+  background: #14181B;
+  padding: 2.5%;
+  align-self: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#downloadBox h4 {
+  padding-top: 0;
+}
+
+#downloadBox img {
+  width: auto;
+  height: 75px;
 }
 
 /*--------------------------------------------------------------
@@ -753,10 +935,6 @@ form {
   line-height: 45px;
 }
 
-.g-recaptcha {
-  margin-bottom: 1rem;
-}
-
 #contactFormStatus {
   clear: both;
   padding-top: 10px;
@@ -831,7 +1009,6 @@ footer img {
 
 @media only screen and (max-width: 950px) {
   /* # Header */
-
   header nav {
     display: none;
     font-size: 18px;
@@ -861,8 +1038,12 @@ footer img {
     display: block !important;
   }
 
-  /* ## Home */
+  section h4 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
 
+  /* ## Home */
   #cta-container {
     width: 80%;
     margin-top: -25px;
@@ -874,6 +1055,33 @@ footer img {
 
   #cta-subtitle {
     font-size: 18px;
+  }
+
+  .product-content img {
+    width: 100%;
+  }
+
+  #product-content-top img:first-child {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  #product-content-top, #product-content-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #download {
+    margin-top: 60px;
+  }
+
+  #downloadBox {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    text-align: center;
+    width: 100%;
   }
 
   #sub-footer {

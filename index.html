@@ -76,6 +76,7 @@
       <nav>
         <ul class="animated fadeIn">
           <li><a data-i18n="product.title" href="#product"></a></li>
+          <li><a data-i18n="product.download" href="#download"></a></li>
           <li><a data-i18n="about.title" href="#about"></a></li>
           <li><a data-i18n="news.title" href="#news"></a></li>
           <li><a data-i18n="contact.title" href="#contact"></a></li>
@@ -114,7 +115,70 @@
   <div class="section-container">
     <section class="flex-column" id="product">
       <h3 class="section-title">Product</h3>
-      <img src="./src/images/product/product.jpg">
+      <div class="product-content" id="product-content-top">
+        <img src="./src/images/product/product.jpg">
+        <div class="product-content-text" id="product-content-top-text">
+          <h4>"Hey, what's Oppy?" 😮</h4>
+          <p>
+            First of all, it's an app available for iOS and Android, you dingus!! 🤓<br><br>
+            Oppy is a social media app built in Flutter, with the purpose to create a place where you can say what you REALLY think, anonymously or not.
+            <br><br>
+            The app is currently in development and needs funding, so please consider donating (even just a tiny bit 🤏) to our <a href="https://www.indiegogo.com/projects/oppy" target="_blank">Indiegogo project to help us out!</a> 🥺💕 We will be forever grateful
+          </p>
+        </div>
+      </div>
+      <div class="product-content" id="product-content-bottom">
+        <div class="product-content-text" id="product-content-bottom-text">
+          <h4>"What does it do?" 🤔</h4>
+          <p>
+            Exactly what you want! (crazy, I know)<br><br>
+            You want to share an <span class="strike-through">unpopular</span> opinion? Say less!<br>
+            Oppy is the place for you! Keep track of how many people <span class="strike-through">dis</span>agree with you
+            and see/share what other people think!<br><br>
+          </p><br>
+          <p id="track-opinion-text">"I think Pizza should be a Human Right!"</p>
+            <div id="track-opinion">
+              <div id="track-vs-text">
+                <div class="track-text" id="track-vs-agree">AGREE</div>
+                <div class="track-text" id="track-vs">VS</div>
+                <div class="track-text" id="track-vs-disagree">DISAGREE</div>
+              </div>
+              <div id="track-bars">
+                <div class="track-bar">
+                  <div id="track-agree"></div>
+                </div>
+                <div class="track-bar">
+                  <div id="track-disagree"></div>
+                </div>
+              </div>
+              <div class="track-result" id="track-perc">69%</div>
+              <div class="track-text track-result" id="track-result">of people agree with you</div>
+            </div>
+          <br>
+          <h4>"How's it different?" 🤠</h4>
+          <p>It has a lot of pretty cool 🐧 stuff, like:</p>
+          <ul>
+            <li>Follow who you like</li>
+            <li>Friends</li>
+            <li>Messages</li>
+            <li>Comments</li>
+            <li>Statistics</li>
+            <li>Dark theme</li>
+            <li>Built with the newest technologies 🚀</li>
+            <li>Black magic</li>
+            <li>The name's pretty cool too, amirite? 😎</li>
+          </ul>
+          <br>
+          <p>That's it folks! For now...</p>
+        </div>
+        <img src="./src/images/product/product.png">
+      </div>
+      <div id="download">
+        <h4>Download</h4>
+        <div id="downloadBox">
+          <h4>Coming soon!</h4>
+        </div>
+      </div>
     </section>
 
     <hr>
