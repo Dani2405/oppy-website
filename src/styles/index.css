@@ -29,9 +29,9 @@
   src: url(../fonts/MaterialIcons/MaterialIcons-Regular.eot);
   /* For IE6-8 */
   src: local("Material Icons"), local("MaterialIcons-Regular"),
-    url(../fonts/MaterialIcons/MaterialIcons-Regular.woff2) format("woff2"),
-    url(../fonts/MaterialIcons/MaterialIcons-Regular.woff) format("woff"),
-    url(../fonts/MaterialIcons/MaterialIcons-Regular.ttf) format("truetype");
+  url(../fonts/MaterialIcons/MaterialIcons-Regular.woff2) format("woff2"),
+  url(../fonts/MaterialIcons/MaterialIcons-Regular.woff) format("woff"),
+  url(../fonts/MaterialIcons/MaterialIcons-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -121,6 +121,7 @@ img {
 ::selection {
   background: rgba(0, 0, 0, 0.35);
 }
+
 ::-moz-selection {
   background: var(--primary);
 }
@@ -505,11 +506,11 @@ section a {
   font-size: 72px;
   background: -o-linear-gradient(left, var(--primary) 25%, var(--secondary) 100%);
   background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    color-stop(25%, var(--primary)),
-    to(var(--secondary))
+          linear,
+          left top,
+          right top,
+          color-stop(25%, var(--primary)),
+          to(var(--secondary))
   );
   background: linear-gradient(to right, var(--primary) 25%, var(--secondary) 100%);
   background-clip: text;
@@ -575,11 +576,11 @@ hr {
 
 #up-button:hover {
   background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(var(--primary)),
-    to(var(--secondary))
+          linear,
+          left top,
+          right top,
+          from(var(--primary)),
+          to(var(--secondary))
   );
   background: -o-linear-gradient(left, var(--primary), var(--secondary));
   background: linear-gradient(to right, var(--primary), var(--secondary));
@@ -630,7 +631,8 @@ hr {
 #cta-text-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;}
+  justify-content: center;
+}
 
 #cta-title {
   font-size: 3em;
@@ -642,20 +644,20 @@ hr {
 }
 
 .cta-btn,
- #contactFormButton {
-   width: 300px;
-   border: var(--border-width-button) solid transparent;
-   cursor: pointer;
-   text-transform: uppercase;
-   background: #00A1E7;
-   color: white;
-   font-weight: bold;
-   letter-spacing: 2px;
-   border-radius: 5px;
-   margin-top: 1rem;
-   outline: none;
-   height: 70px;
- }
+#contactFormButton {
+  width: 300px;
+  border: var(--border-width-button) solid transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #00A1E7;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  outline: none;
+  height: 70px;
+}
 
 .cta-btn:hover,
 #contactFormButton:hover {
@@ -698,7 +700,8 @@ hr {
   margin-bottom: 60px;
 }
 
-#product-content-bottom {}
+#product-content-bottom {
+}
 
 .product-content-text {
   width: 100%;
@@ -1006,7 +1009,6 @@ footer img {
 
 @media only screen and (max-width: 950px) {
   /* # Header */
-
   header nav {
     display: none;
     font-size: 18px;
@@ -1042,7 +1044,6 @@ footer img {
   }
 
   /* ## Home */
-
   #cta-container {
     width: 80%;
     margin-top: -25px;
@@ -1081,111 +1082,111 @@ footer img {
     padding: 5%;
     text-align: center;
     width: 100%;
-}
+  }
 
-#sub-footer {
-flex-direction: column;
-justify-content: space-around;
-}
+  #sub-footer {
+    flex-direction: column;
+    justify-content: space-around;
+  }
 
-#footer-icons {
-height: 100px;
-align-items: flex-end;
-}
+  #footer-icons {
+    height: 100px;
+    align-items: flex-end;
+  }
 
-button.cta-btn {
-width: 200px;
-font-size: 12px;
-height: 50px;
-}
+  button.cta-btn {
+    width: 200px;
+    font-size: 12px;
+    height: 50px;
+  }
 }
 
 @media (orientation: landscape) and (max-width: 850px) {
-#up-button {
-display: none;
-}
+  #up-button {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-.header-container__right {
-flex-direction: row-reverse;
-}
+  .header-container__right {
+    flex-direction: row-reverse;
+  }
 
-hr {
-margin-bottom: 3rem;
-}
+  hr {
+    margin-bottom: 3rem;
+  }
 
-#cta-container {
-flex-direction: column-reverse;
-}
+  #cta-container {
+    flex-direction: column-reverse;
+  }
 
-#cta-container img {
-align-self: center;
-margin-bottom: 2rem;
-margin-left: 1.2rem;
-width: 70%;
-height: fit-content;
-}
+  #cta-container img {
+    align-self: center;
+    margin-bottom: 2rem;
+    margin-left: 1.2rem;
+    width: 70%;
+    height: fit-content;
+  }
 
-button.cta-btn {
-width: 100%;
-}
+  button.cta-btn {
+    width: 100%;
+  }
 
-section p {
-font-size: 18px;
-}
+  section p {
+    font-size: 18px;
+  }
 
-.section-title {
--ms-flex-item-align: center !important;
--ms-grid-row-align: center !important;
-align-self: center !important;
-}
+  .section-title {
+    -ms-flex-item-align: center !important;
+    -ms-grid-row-align: center !important;
+    align-self: center !important;
+  }
 
-#up-button {
-display: none;
-}
+  #up-button {
+    display: none;
+  }
 
-#form-container img {
-display: none;
-}
+  #form-container img {
+    display: none;
+  }
 
-#form-container {
-justify-content: center;
-}
+  #form-container {
+    justify-content: center;
+  }
 
-#form-container input[type=submit] {
-width: 100%;
-}
+  #form-container input[type=submit] {
+    width: 100%;
+  }
 
-footer h2 {
-font-size: 1.25rem;
-}
+  footer h2 {
+    font-size: 1.25rem;
+  }
 }
 
 @media only screen and (max-width: 375px) {
-#cta-container img {
-width: 60%;
-margin-bottom: 1rem;
-}
+  #cta-container img {
+    width: 60%;
+    margin-bottom: 1rem;
+  }
 }
 
 @media only screen and (max-width: 360px) {
-#cta-container img {
-display: none;
-}
+  #cta-container img {
+    display: none;
+  }
 
-footer h2 {
-font-size: 1rem;
-}
+  footer h2 {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 320px) {
-section > .section-title {
-margin: 0 auto;
-float: none;
-}
+  section > .section-title {
+    margin: 0 auto;
+    float: none;
+  }
 
-.header-small nav ul li a {
-letter-spacing: 0;
-}
+  .header-small nav ul li a {
+    letter-spacing: 0;
+  }
 }
