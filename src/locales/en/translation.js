@@ -19,7 +19,7 @@ window.languages.english = {
     "download": "Download"
   },
   "about": {
-    "title": "About",
+    "title": "Team",
     "what_is_odys": "What is Odys?",
     "what_is_odys_text": "Centralized in Switzerland, we are a group of motivated individuals ready to get involved in projects and give our clients the best services we can offer.",
     "what_do_we_do": "What do we do?",
