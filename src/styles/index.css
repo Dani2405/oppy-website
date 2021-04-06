@@ -76,6 +76,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+
+.emoji {
+  width: 1em !important;
+  pointer-events: none !important;
+}
+
 p,
 h4 {
   color: var(--text-color);
@@ -678,7 +684,7 @@ hr {
   margin: 75px 0;
 }
 
-.product-content img {
+.product-content img:not(.emoji) {
   width: 50%;
   height: fit-content;
 }
