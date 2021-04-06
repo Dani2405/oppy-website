@@ -23,6 +23,20 @@
   <!-- Favicon -->
   <link href="src/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
+  <!-- Emojis -->
+  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+  <!-- Script to render emojis as Twemojis -->
+  <script>
+    window.onload = function() {
+      // Parses the document body and
+      // inserts <img> tags in place of Unicode Emojis
+      twemoji.parse(document.body,
+        {folder: 'svg', ext: '.svg'} // This is to specify to Twemoji to use SVGs and not PNGs
+      );
+
+    }
+  </script>
+
   <!-- Fonts -->
   <link href="https://use.typekit.net/vlj5xpq.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">

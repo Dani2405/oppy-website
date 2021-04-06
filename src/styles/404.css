@@ -14,6 +14,17 @@
   src: url("../fonts/Lao Sangam MN.ttf");
 }
 
+
+:root {
+  --primary: white;
+  --secondary: white;
+  --text-color: white;
+  --element-color: #14181b;
+  --background-color: #192024;
+  --link-color: #dddddd;
+  --link-color-hover: white;
+}
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -26,47 +37,28 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  color: #ffffff;
-  --background-color: #1d1d1d;
-  --element-color: #272727;
-  --line-color: #70213F;
-  --link-color: #9d9d9d;
-  --link-color-hover: #FFF;
-  --border-width-button: 4px;
+  color: #fff;
 }
 
 body {
   background-color: var(--background-color);
-  font-family: 'Manjari', sans-serif;
-  color: #808080;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-h1 {
-  font-size: 8rem;
-  margin: 0;
-  padding: 50px 0 0 50px;
-  text-align: left;
-}
 
-h3 {
-  font-size: 5rem;
-  margin: 0;
-  padding-top: 50px;
-}
-
-img {
-  -webkit-user-drag: none;
-}
-
-a {
-  color: #F1316C;
-  font-size: 24px;
-  text-decoration: none;
+#logo {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  width: 100px;
 }
 
 #content {
-  height: 100%;
-  width: 100%;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
   display: flex;
   flex-direction: column;
   -webkit-box-pack: center;
@@ -82,90 +74,69 @@ a {
   flex-basis: auto;
 }
 
-#errorCode {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-item-align: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  align-items: center;
-  margin: 0 50px 0 50px;
-  width: 80%;
-  margin: auto;
+.bg {
+  width: 105%;
+  height: 105%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: url("../images/404/bg.svg") no-repeat center bottom 30px;
+  background-size: cover;
 }
 
-#error404 {
-  height: 100%;
-  width: 60%;
+h3 {
+  font-size: 5rem;
 }
 
-.cloud {
-  height: 50%;
-  width: 20%;
-  position: relative;
+a {
+  color: var(--link-color);
+  font-size: 24px;
+  text-decoration: none;
 }
 
-#leftCloud {
-  left: 10%;
-  top: 50px;
-  opacity: 0.8;
+a:hover {
+  color: var(--link-color-hover);
+  text-decoration: underline;
 }
 
-#rightCloud {
-  z-index: -1;
-  right: 15%;
-  bottom: 50px;
-  opacity: 0.8;
+.btn {
+  width: 300px;
+  border: var(--border-width-button) solid transparent;
+  cursor: pointer;
+  background: #00A1E7;
+  color: white;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  outline: none;
+  height: 70px;
+  font-weight: 600;
 }
 
-#errorMessage {
-  height: 50%;
+.btn:hover {
+  background: #42D2FF;
 }
 
-@media only screen and (max-width: 480px) {
-  #error404 {
+#credits {
+  position: fixed;
+  bottom: 10px;
+  left: 10px ;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 950px) {
+  #content{
+    background: none;
+    overflow: hidden;
+  }
+
+  .bg {
     width: 100%;
+    height: 100%;
+    background-position: center bottom 0;
   }
 
-  #errorCode {
-    margin: 4rem auto;
-  }
-
-  .cloud {
-    width: 30%;
-  }
-
-  #leftCloud {
-    left: 30%;
-  }
-
-  #rightCloud {
-    right: 30%;
-  }
-
-  h1 {
-    padding: unset;
-    padding-left: 2rem;
-    font-size: 4rem;
-  }
-
-  #errorMessage {
-    padding: 1rem 0 0;
-    height: unset;
-  }
-
-  h3 {
-    font-size: 2rem;
-    padding: 0 .8rem .8rem;
-  }
-
-  a {
-    font-size: 20px;
+  #message h3 {
+    font-size: 3em;
   }
 }
