@@ -851,7 +851,6 @@ hr {
   margin-top: 40px;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 .about-team-member {
@@ -907,6 +906,7 @@ hr {
   padding: 0 50px;
   font-size: 18px;
   text-align: center;
+  height: 50px;
 }
 
 .about-team-member-social {
