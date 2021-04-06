@@ -510,18 +510,6 @@ section a {
   margin: 0;
   margin-bottom: 4rem;
   font-size: 72px;
-  background: -o-linear-gradient(left, var(--primary) 25%, var(--secondary) 100%);
-  background: -webkit-gradient(
-          linear,
-          left top,
-          right top,
-          color-stop(25%, var(--primary)),
-          to(var(--secondary))
-  );
-  background: linear-gradient(to right, var(--primary) 25%, var(--secondary) 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 section h4 {
@@ -550,7 +538,7 @@ hr {
   width: 60%;
   height: 3px;
   border-radius: 10px;
-  background: #14181B;
+  background: var(--element-color);
 }
 
 .strike-through {
@@ -581,17 +569,7 @@ hr {
 }
 
 #up-button:hover {
-  background: -webkit-gradient(
-          linear,
-          left top,
-          right top,
-          from(var(--primary)),
-          to(var(--secondary))
-  );
-  background: -o-linear-gradient(left, var(--primary), var(--secondary));
-  background: linear-gradient(to right, var(--primary), var(--secondary));
-  -webkit-animation: animatedgradient 3s ease alternate infinite;
-  animation: animatedgradient 3s ease alternate infinite;
+  background: var(--secondary);
   background-size: 300% 300%;
   border: 1px solid transparent;
   opacity: 1;
@@ -824,7 +802,7 @@ hr {
   margin-top: 45px;
   border: 3px solid #4e4e4e;
   border-radius: 25px;
-  background: #14181B;
+  background: var(--element-color);
   padding: 2.5%;
   align-self: center;
   display: flex;
@@ -844,13 +822,108 @@ hr {
 ## About
 --------------------------------------------------------------*/
 
-#about {
-  margin-top: 50px;
-}
+#about {}
 
 #about p {
   line-height: 1.5;
-  margin-bottom: 30px;
+}
+
+#about-desc {
+  margin-top: 30px;
+  font-size: 22px;
+}
+
+#about-title {
+  display: flex;
+  flex-direction: column;
+}
+
+#about-title *:first-child {
+  font-size: 1.5rem;
+}
+
+#about-title *:last-child {
+  font-size: 3rem;
+  margin-left: 50px;
+}
+
+#about-team {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about-team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-team-member-pic {
+  background: var(--element-color);
+  height: 300px;
+  width: 300px;
+  border-radius: 100%;
+  border: 5px solid #4e4e4e;
+}
+
+#about-team-member-pic-daniel {
+  background-image: url("../images/about/Daniel.png");
+}
+
+#about-team-member-pic-ignacio {
+  background-image: url("../images/about/Ignacio.png");
+}
+
+.about-team-member-pers-trait {
+  background: #192024;
+  border-radius: 100%;
+  border: 2px solid #4e4e4e;
+  padding: 10px;
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-team-member-name {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.about-team-member-role {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.about-team-member p {
+  width: 80%;
+  padding: 0 50px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.about-team-member-social {
+}
+
+.about-team-member-social a {
+  text-decoration: none;
+}
+
+.about-team-member-social svg {
+  width: 40px;
+  height: 40px;
+  fill: var(--link-color);
+  margin: 0 5px;
+}
+
+.about-team-member-social svg:hover {
+  fill: var(--link-color-hover);
 }
 
 /*--------------------------------------------------------------
@@ -897,7 +970,7 @@ form {
 }
 
 .form-input {
-  background-color: #14181b;
+  background-color: var(--element-color);
   border: 0;
   border-bottom: 1px solid #323d44;
   border-radius: 5px 5px 0 0;
