@@ -500,7 +500,12 @@ section > .section-content {
 }
 
 section a {
-  color: var(--secondary);
+  color: #1fb8ff;
+  font-weight: 300;
+}
+
+section a:hover {
+  color: #49ceff;
 }
 
 .section-title {
@@ -906,7 +911,6 @@ hr {
   padding: 0 50px;
   font-size: 18px;
   text-align: center;
-  height: 50px;
 }
 
 .about-team-member-social {
