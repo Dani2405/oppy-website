@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
-  <meta name="theme-color" content="#272727">
+  <meta name="theme-color" content="#14181B">
 
-  <title>Odys Group - Page not found</title>
+  <title>Oppy - Page not found</title>
 
   <!--Favicon-->
   <link href="src/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
   <!--Fonts-->
   <link href="https://use.typekit.net/vlj5xpq.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap" rel="stylesheet">
 
   <!--CSS-->
   <link href="./src/styles/404.css" rel="stylesheet">
@@ -21,17 +21,29 @@
 </head>
 
 <body>
+<div class="bg"></div>
 <div class="animated slower fadeIn" id="content">
-  <h1>Oops!</h1>
-  <div id="errorCode">
-    <img class="cloud animated slowest infinite shake" id="leftCloud" src="src/images/404/cloudLeft.svg">
-    <img id="error404" src="src/images/404/404Text.png">
-    <img class="cloud animated slowest infinite shake delay-1-5s" id="rightCloud" src="src/images/404/cloudRight.svg">
+  <a href="/"><img id="logo" src="src/images/logo_name.svg"></a>
+  <div id="message">
+    <h3>Page not found</h3>
+    <a href="/"><button class="btn">Return home</button></a>
   </div>
-  <div id="errorMessage">
-    <h3>Page Not Found</h3>
-    <a href="/">Return to home</a>
-  </div>
+  <a id="credits" href="https://www.vecteezy.com/free-vector/nature">Image by Vecteezy</a>
 </div>
 </body>
+
+<!--JavaScript-->
+<!-- Code by https://codepen.io/shadowdesigner/pen/ZpdwEa -->
+<script>
+  const bg = document.querySelector('.bg');
+  const windowWidth = window.innerWidth / 1;
+  const windowHeight = window.innerHeight / 1 ;
+
+  document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX / windowWidth;
+    const mouseY = e.clientY / windowHeight;
+
+    bg.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
+  });
+</script>
 </html>
