@@ -4,9 +4,9 @@
 <head>
   <!-- Load the JavaScript API for reCAPTCHA v2  -->
   <script type="text/javascript">
-    var onloadCallback = function() {
+    var onloadCallback = function () {
       grecaptcha.render('reCAPTCHA', {
-        'sitekey' : '6LfRIpwaAAAAAKXm_3qBpnTLOTd_MRJT8Xx7Lpvk'
+        'sitekey': '6LfRIpwaAAAAAKXm_3qBpnTLOTd_MRJT8Xx7Lpvk'
       });
     };
   </script>
@@ -24,10 +24,10 @@
   <link href="src/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
   <!-- Emojis -->
-  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+  <script crossorigin="anonymous" src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
   <!-- Script to render emojis as Twemojis -->
   <script>
-    window.onload = function() {
+    window.onload = function () {
       // Parses the document body and
       // inserts <img> tags in place of Unicode Emojis
       twemoji.parse(document.body,
@@ -39,8 +39,9 @@
 
   <!-- Fonts -->
   <link href="https://use.typekit.net/vlj5xpq.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap" rel="stylesheet">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap"
+        rel="stylesheet">
 
   <!-- CSS -->
   <link href="./src/styles/index.css" rel="stylesheet">
@@ -115,13 +116,14 @@
 
 <div id="home">
   <div id="cta-container">
-      <div id="cta-text-container">
-        <h1 id="cta-title">Share your opinion with the world!</h1>
-        <p id="cta-subtitle">See what everyone REALLY thinks</p>
-        <button class="cta-btn" onclick=' window.open("https://www.indiegogo.com/projects/oppy","_blank")' data-i18n="cta.button">
-        </button>
-      </div>
-      <img alt="Preview" draggable="false" src="./src/images/home/home.png">
+    <div id="cta-text-container">
+      <h1 id="cta-title">Share your opinion with the world!</h1>
+      <p id="cta-subtitle">See what everyone REALLY thinks</p>
+      <button class="cta-btn" data-i18n="cta.button"
+              onclick=' window.open("https://www.indiegogo.com/projects/oppy","_blank")'>
+      </button>
+    </div>
+    <img alt="Preview" draggable="false" src="./src/images/home/home.png">
   </div>
 </div>
 
@@ -135,9 +137,12 @@
           <h4>"Hey, what's Oppy?" 😮</h4>
           <p>
             First of all, it's an app available for iOS and Android, you dingus!! 🤓<br><br>
-            Oppy is a social media app built in Flutter, with the purpose to create a place where you can say what you REALLY think, anonymously or not.
+            Oppy is a social media app built in Flutter, with the purpose to create a place where you can say what you
+            REALLY think, anonymously or not.
             <br><br>
-            The app is currently in development and needs funding, so please consider donating (even just a tiny bit 🤏) to our <a href="https://www.indiegogo.com/projects/oppy" target="_blank">Indiegogo project to help us out</a>! 🤗 We will be forever grateful
+            The app is currently in development and needs funding, so please consider donating (even just a tiny bit 🤏)
+            to our <a href="https://www.indiegogo.com/projects/oppy" target="_blank">Indiegogo project to help us
+            out</a>! 🤗 We will be forever grateful
           </p>
         </div>
       </div>
@@ -147,27 +152,28 @@
           <p>
             Exactly what you want! (crazy, I know)<br><br>
             You want to share an <span class="strike-through">unpopular</span> opinion? Say less!<br>
-            Oppy is the place for you! Keep track of how many people <span class="strike-through">dis</span>agree with you
+            Oppy is the place for you! Keep track of how many people <span class="strike-through">dis</span>agree with
+            you
             and see/share what other people think!<br><br>
           </p><br>
           <p id="track-opinion-text">"I think Pizza should be a Human Right!"</p>
-            <div id="track-opinion">
-              <div id="track-vs-text">
-                <div class="track-text" id="track-vs-agree">AGREE</div>
-                <div class="track-text" id="track-vs">VS</div>
-                <div class="track-text" id="track-vs-disagree">DISAGREE</div>
-              </div>
-              <div id="track-bars">
-                <div class="track-bar">
-                  <div id="track-agree"></div>
-                </div>
-                <div class="track-bar">
-                  <div id="track-disagree"></div>
-                </div>
-              </div>
-              <div class="track-result" id="track-perc">69%</div>
-              <div class="track-text track-result" id="track-result">of people agree with you</div>
+          <div id="track-opinion">
+            <div id="track-vs-text">
+              <div class="track-text" id="track-vs-agree">AGREE</div>
+              <div class="track-text" id="track-vs">VS</div>
+              <div class="track-text" id="track-vs-disagree">DISAGREE</div>
             </div>
+            <div id="track-bars">
+              <div class="track-bar">
+                <div id="track-agree"></div>
+              </div>
+              <div class="track-bar">
+                <div id="track-disagree"></div>
+              </div>
+            </div>
+            <div class="track-result" id="track-perc">69%</div>
+            <div class="track-text track-result" id="track-result">of people agree with you</div>
+          </div>
           <br>
           <h4>"How's it different?" 🤠</h4>
           <p>It has a lot of pretty cool 🐧 stuff, like:</p>
@@ -201,7 +207,8 @@
       <div class="sectionContainer flex-column">
         <h4 id="about-title"><span>"Wait a minute...</span><span>Who ARE you?"</span></h4>
         <p id="about-desc">
-          We are a team of developers from Switzerland with a passion for coding, with the desire to create something innovative and fun to use for everyone! 🎉
+          We are a team of developers from Switzerland with a passion for coding, with the desire to create something
+          innovative and fun to use for everyone! 🎉
         </p>
         <div id="about-team">
           <div class="about-team-member">
@@ -271,7 +278,8 @@
           <div class="form-field">
             <div class="input-title">
               <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" />
+                <path
+                  d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z"/>
               </svg>
               <label data-i18n="contact.email" for="email"></label>
             </div>
@@ -281,14 +289,15 @@
           <div class="form-field">
             <div class="input-title">
               <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path d="M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H6L2,22V4C2,2.89 2.9,2 4,2H20M4,4V17.17L5.17,16H20V4H4M6,7H18V9H6V7M6,11H15V13H6V11Z" />
+                <path
+                  d="M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H6L2,22V4C2,2.89 2.9,2 4,2H20M4,4V17.17L5.17,16H20V4H4M6,7H18V9H6V7M6,11H15V13H6V11Z"/>
               </svg>
               <label data-i18n="contact.message" for="message"></label>
             </div>
             <textarea autocomplete="off" class="form-input" id="message" name="message" required type="text"></textarea>
           </div>
           <input name="_subject" type="hidden" value="Contact Form"/>
-          <div class="g-recaptcha" id="reCAPTCHA" data-theme="dark"></div>
+          <div class="g-recaptcha" data-theme="dark" id="reCAPTCHA"></div>
           <input class="form-input" data-i18n="contact.send" id="contactFormButton" type="submit">
           <p id="contactFormStatus"></p>
         </form>
@@ -300,7 +309,8 @@
 
   <a id="up-button">
     <svg style="width:48px;height:48px;" viewBox="0 0 24 24">
-      <path fill="#FFF" ng-attr-d="{{icon.data}}" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"></path>
+      <path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" fill="#FFF"
+            ng-attr-d="{{icon.data}}"></path>
     </svg>
   </a>
 </div>
@@ -340,7 +350,7 @@
 
 <!-- Javascript -->
 <script src="src/scripts/script.js"></script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script async defer src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"></script>
 </body>
 
 </html>
