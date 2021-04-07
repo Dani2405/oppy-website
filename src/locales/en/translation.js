@@ -2,34 +2,72 @@ window.languages.english = {
   "page": {
     "title": "Oppy",
     "metadata": {
-      "description": ""
+      "description": "Share your opinion with the world! See what everyone REALLY thinks"
     }
   },
+
   "cta": {
-    "title1": "Need a website?",
-    "title2": "Need a mobile app?",
-    "title3": "Need a desktop app?",
-    "title4": "Need a logo?",
-    "title5": "Need an artwork?",
-    "subtitle": "Contact us to get your business started right away!",
-    "button": "BACK OUR PROJECT"
+    "title": "Share your opinion with the world!",
+    "desc": "See what everyone REALLY thinks",
+    "button": "BACK OUR PROJECT 🥳",
   },
+
   "product": {
     "title": "Product",
-    "download": "Download"
+    "download": "Download",
+    "title1": "\"Hey, what's Oppy?\" 😮",
+    "desc1-1": "First of all, it's an app available for iOS and Android, you dingus!! 🤓",
+    "desc1-2": "Oppy is a social media app built in Flutter, with the purpose to create a place where you can say what you REALLY think, anonymously or not.",
+    "desc1-3": "The app is currently in development and needs funding, so please consider donating (even just a tiny bit 🤏) to our <a href=\"https://www.indiegogo.com/projects/oppy\" target=\"_blank\">Indiegogo project to help us out</a>! 🤗 We will be forever grateful",
+    "title2": "\"What does it do?\" 🤔",
+    "desc2": "Exactly what you want! (crazy, I know)<br><br>You want to share an <span class=\"strike-through\">unpopular</span> opinion? Say less!<br>Oppy is the place for you! Keep track of how many people <span class=\"strike-through\">dis</span>agree with you and see/share what other people think!<br><br>",
+    "opinion": {
+      "text": "\"I think Pizza should be a Human Right!\"",
+      "agree": "agree",
+      "disagree": "disagree",
+      "result": "of people agree with you",
+    },
+    "title3": "\"How's it different?\" 🤠",
+    "desc3": "It has a lot of pretty cool 🐧 stuff, like:",
+    "features": {
+      "li1": "Follow who you like",
+      "li2": "Friends",
+      "li3": "Messages",
+      "li4": "Comments",
+      "li5": "Statistics",
+      "li6": "Dark theme",
+      "li7": "Built with the newest technologies 🚀",
+      "li8": "Black magic",
+      "li9": "The name's pretty cool too, amirite? 😎",
+    },
+    "desc4": "That's it folks! For now...",
+    "dl": {
+      "title": "Download",
+      "text": "Coming soon!",
+    },
   },
+
   "about": {
     "title": "Team",
-    "what_is_odys": "What is Odys?",
-    "what_is_odys_text": "Centralized in Switzerland, we are a group of motivated individuals ready to get involved in projects and give our clients the best services we can offer.",
-    "what_do_we_do": "What do we do?",
-    "what_do_we_do_text": "Our primary goal is to provide our clients with creative and expandable solutions, whenever, and however they want them deployed.<br><br>We are ready to assist you with either redesigning your website or mobile application, and can even help with building a new project from the ground up. If you wish, we can create brand new graphics or logos for your organization as well.",
-    "how_to_get_in_touch": "How to get in touch",
-    "how_to_get_in_touch_text": "If you're interested in discussing a project with us, or if you have any particular request, feel free to contact us directly through the contact form at the bottom of the page or simply write us at <a href=\"mailto:info@odys-group.com\">info@odys-group.com</a>"
+    "title1-1": "\"Wait a minute...",
+    "title1-2": "Who ARE you?\"",
+    "desc": "We are a team of developers from Switzerland with a passion for coding, with the desire to create something innovative and fun to use for everyone! 🎉",
+    "daniel": {
+      "role": "🏢 Founder",
+      "desc": "I really like chicken nuggets and pizza 🍕",
+      "likes": "Likes: Movies, Music, Animals, Gaming, Pizza, Coding, Science, Space & Technology",
+    },
+    "ignacio": {
+      "role": "🏢 Co-Founder",
+      "desc": "I love my dog 🐶 and really enjoy sushi 🍣",
+      "likes": "Likes: Technology, Drawing, Travelling, Eating, Movies, Sleeping, Anime & Learning",
+    },
   },
+
   "news": {
     "title": "News"
   },
+
   "contact": {
     "title": "Contact",
     "email": "Email",

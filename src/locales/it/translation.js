@@ -1,48 +1,73 @@
 window.languages.italian = {
   "page": {
-    "title": "Odys Group | Soluzioni software e web",
+    "title": "Oppy",
     "metadata": {
-      "description": "Un team motivato che offre soluzioni su misura ai nostri clienti, da pagine statiche singole a siti e-commerce avanzati o applicazioni desktop/mobile personalizzate per tutti i tuoi bisogni. Aumenta la visibilità della tua attività commerciale tramite il potere del SEO."
+      "description": "Share your opinion with the world! See what everyone REALLY thinks"
     }
   },
+
   "cta": {
-    "title1": "Necessiti di un sito web?",
-    "title2": "Necessiti di un'app?",
-    "title3": "Necessiti di un software?",
-    "title4": "Necessiti di un logo?",
-    "title5": "Necessiti di un artwork?",
-    "subtitle": "Contattaci per realizzare subito la tua idea!",
-    "button": "Lavora con noi!"
+    "title": "Share your opinion with the world!",
+    "desc": "See what everyone REALLY thinks",
+    "button": "BACK OUR PROJECT",
   },
+
+  "product": {
+    "title": "Product",
+    "download": "Download",
+    "title1": "\"Hey, what's Oppy?\" 😮",
+    "desc1-1": "First of all, it's an app available for iOS and Android, you dingus!! 🤓",
+    "desc1-2": "Oppy is a social media app built in Flutter, with the purpose to create a place where you can say what you REALLY think, anonymously or not.",
+    "desc1-3": "The app is currently in development and needs funding, so please consider donating (even just a tiny bit 🤏) to our <a href=\"https://www.indiegogo.com/projects/oppy\" target=\"_blank\">Indiegogo project to help us out</a>! 🤗 We will be forever grateful",
+    "title2": "\"What does it do?\" 🤔",
+    "desc2": "Exactly what you want! (crazy, I know)<br><br>You want to share an <span class=\"strike-through\">unpopular</span> opinion? Say less!<br>Oppy is the place for you! Keep track of how many people <span class=\"strike-through\">dis</span>agree with you and see/share what other people think!<br><br>",
+    "opinion": {
+      "text": "\"I think Pizza should be a Human Right!\"",
+      "agree": "agree",
+      "disagree": "disagree",
+      "result": "of people agree with you",
+    },
+    "title3": "\"How's it different?\" 🤠",
+    "desc3": "It has a lot of pretty cool 🐧 stuff, like:",
+    "features": {
+      "li1": "Follow who you like",
+      "li2": "Friends",
+      "li3": "Messages",
+      "li4": "Comments",
+      "li5": "Statistics",
+      "li6": "Dark theme",
+      "li7": "Built with the newest technologies 🚀",
+      "li8": "Black magic",
+      "li9": "The name's pretty cool too, amirite? 😎",
+    },
+    "desc4": "That's it folks! For now...",
+    "dl": {
+      "title": "Download",
+      "text": "Coming soon!",
+    },
+  },
+
   "about": {
-    "title": "Chi siamo",
-    "what_is_odys": "Cos'è Odys?",
-    "what_is_odys_text": "Siamo un team motivato con sede in Svizzera, pronti a essere coinvolti in progetti e dare ai nostri clienti i migliori servizi che abbiamo da offrire.",
-    "what_do_we_do": "Cosa facciamo?",
-    "what_do_we_do_text": "Il nostro obiettivo principale è quello di fornire soluzioni creative ed espansibili ai nostri clienti, in qualsiasi momento e modo vogliano eseguirle.<br><br>Siamo pronti ad assisterti con un ri-design del tuo sito web oppure la tua applicazione mobile e possiamo anche aiutarti nella costruzione di un nuovo progetto da zero. Se vuoi, possiamo creare grafiche e loghi nuovi per la tua organizzazione.",
-    "how_to_get_in_touch": "Come contattarci",
-    "how_to_get_in_touch_text": "Se fossi interessato nel discutere un progetto con noi, o se dovessi avere qualsiasi tipo di richiesta, sentiti libero di contattarci direttamente nel form in fondo alla pagina oppure scrivici semplicemente su <a href=\"mailto:info@odys-group.com\">info@odys-group.com</a>"
+    "title": "Team",
+    "title1-1": "\"Aspetta...",
+    "title1-2": "Ma chi SIETE voi?\"",
+    "desc": "We are a team of developers from Switzerland with a passion for coding, with the desire to create something innovative and fun to use for everyone! 🎉",
+    "daniel": {
+      "role": "🏢 Founder",
+      "desc": "I really like chicken nuggets and pizza 🍕",
+      "likes": "Likes: Movies, Music, Animals, Gaming, Pizza, Coding, Science, Space & Technology",
+    },
+    "ignacio": {
+      "role": "🏢 Co-Founder",
+      "desc": "I love my dog 🐶 and really enjoy sushi 🍣",
+      "likes": "Likes: Technology, Drawing, Travelling, Eating, Movies, Sleeping, Anime & Learning",
+    },
   },
-  "solutions": {
-    "title": "Soluzioni",
-    "web_design": "Web Design",
-    "web_design_text": "Siti web, e-commerce",
-    "mobile_desktop_apps": "App Mobile/Desktop",
-    "mobile_desktop_apps_text": "Soluzioni Mobile e/o Desktop per le esigenze della tua organizzazione",
-    "graphic_design": "Graphic Design",
-    "graphic_design_text": "Loghi, artwork, cover per album/single"
+
+  "news": {
+    "title": "News"
   },
-  "projects": {
-    "title": "Progetti",
-    "odys_website": "Sito web Odys",
-    "odys_website_text": "Il sito su cui sei attualmente è stato progettato e sviluppato da noi con cura.<br><br>Crediamo che il nostro design debba risaltare e rappresentare chi siamo. Con una passione per un design moderno e minimalista e con l'obiettivo di mantenere le cose semplici dov'è possibile.<br><br>Semplice. Diretto. D'impatto.",
-    "distorted": "Sito web Distorted",
-    "distorted_text": "Sito web realizzato per il marchio di abbigliamento Distorted",
-    "frDesign": "Portfolio FR Design",
-    "frDesign_text": "Portfolio per il sito di FR Design",
-    "sonorum": "Sito web Sonorum",
-    "sonorum_text": "Sito realizzato per un evento di beneficenza in Ticino che organizza concerti in streaming"
-  },
+
   "contact": {
     "title": "Contatto",
     "email": "Email",

@@ -28,12 +28,15 @@
   <!-- Script to render emojis as Twemojis -->
   <script>
     window.onload = function () {
+    }
+    parseEmojis();
+
+    function parseEmojis() {
       // Parses the document body and
       // inserts <img> tags in place of Unicode Emojis
       twemoji.parse(document.body,
         {folder: 'svg', ext: '.svg'} // This is to specify to Twemoji to use SVGs and not PNGs
       );
-
     }
   </script>
 
@@ -48,10 +51,10 @@
   <link href="./src/styles/animate.css" rel="stylesheet">
 
   <!-- If we have multiple versions of a page for different languages or regions (SEO) -->
-  <link href="https://odys-group.com/?lng=en" hreflang="en" rel="alternate"/>
-  <link href="https://odys-group.com/?lng=it" hreflang="it" rel="alternate"/>
-  <link href="https://odys-group.com/?lng=es" hreflang="es" rel="alternate"/>
-  <link href="https://odys-group.com/?lng=de" hreflang="de" rel="alternate"/>
+  <link href="https://oppy.app/?lng=en" hreflang="en" rel="alternate"/>
+  <link href="https://oppy.app/?lng=it" hreflang="it" rel="alternate"/>
+  <link href="https://oppy.app/?lng=es" hreflang="es" rel="alternate"/>
+  <link href="https://oppy.app/?lng=de" hreflang="de" rel="alternate"/>
 
   <!-- i18next -->
   <script crossorigin="anonymous"
@@ -78,7 +81,7 @@
 <header id="header">
   <div class="header-container">
     <div class="header-container__left">
-      <img alt="Odys Group, personalized applications and websites" class="animated fadeIn" draggable="false"
+      <img alt="Oppy" class="animated fadeIn" draggable="false"
            id="header-logo" src="src/images/logo_name.svg">
     </div>
     <div class="header-container__right">
@@ -117,11 +120,13 @@
 <div id="home">
   <div id="cta-container">
     <div id="cta-text-container">
-      <h1 id="cta-title">Share your opinion with the world!</h1>
-      <p id="cta-subtitle">See what everyone REALLY thinks</p>
-      <button class="cta-btn" data-i18n="cta.button"
+      <h1 id="cta-title" data-i18n="cta.title">Share your opinion with the world!</h1>
+      <p id="cta-subtitle" data-i18n="cta.desc">See what everyone REALLY thinks</p>
+      <!--<button class="cta-btn"
               onclick=' window.open("https://www.indiegogo.com/projects/oppy","_blank")'>
-      </button>
+        <span data-i18n="cta.button">BACK OUR PROJECT</span>
+      </button>-->
+      <a class="cta-btn" data-i18n="cta.button" href="https://www.indiegogo.com/projects/oppy" target="_blank"></a>
     </div>
     <img alt="Preview" draggable="false" src="./src/images/home/home.png">
   </div>
@@ -130,16 +135,21 @@
 <div id="content">
   <div class="section-container">
     <section class="flex-column" id="product">
-      <h3 class="section-title">Product</h3>
+      <h3 class="section-title" data-i18n="product.title">Product</h3>
       <div class="product-content" id="product-content-top">
-        <img src="./src/images/product/product.jpg">
+        <img id="product-pic" src="./src/images/product/product.jpg">
         <div class="product-content-text" id="product-content-top-text">
-          <h4>"Hey, what's Oppy?" 😮</h4>
-          <p>
-            First of all, it's an app available for iOS and Android, you dingus!! 🤓<br><br>
+          <h4 data-i18n="product.title1">"Hey, what's Oppy?" 😮</h4>
+          <p data-i18n="product.desc1-1">
+            First of all, it's an app available for iOS and Android, you dingus!! 🤓
+          </p>
+          <br><br>
+          <p data-i18n="product.desc1-2">
             Oppy is a social media app built in Flutter, with the purpose to create a place where you can say what you
             REALLY think, anonymously or not.
-            <br><br>
+          </p>
+          <br><br>
+          <p data-i18n="product.desc1-3">
             The app is currently in development and needs funding, so please consider donating (even just a tiny bit 🤏)
             to our <a href="https://www.indiegogo.com/projects/oppy" target="_blank">Indiegogo project to help us
             out</a>! 🤗 We will be forever grateful
@@ -148,20 +158,20 @@
       </div>
       <div class="product-content" id="product-content-bottom">
         <div class="product-content-text" id="product-content-bottom-text">
-          <h4>"What does it do?" 🤔</h4>
-          <p>
+          <h4 data-i18n="product.title2">"What does it do?" 🤔</h4>
+          <p data-i18n="product.desc2">
             Exactly what you want! (crazy, I know)<br><br>
             You want to share an <span class="strike-through">unpopular</span> opinion? Say less!<br>
             Oppy is the place for you! Keep track of how many people <span class="strike-through">dis</span>agree with
-            you
-            and see/share what other people think!<br><br>
-          </p><br>
-          <p id="track-opinion-text">"I think Pizza should be a Human Right!"</p>
+            you and see/share what other people think!<br><br>
+          </p>
+          <br>
+          <p id="track-opinion-text" data-i18n="product.opinion.text">"I think Pizza should be a Human Right!"</p>
           <div id="track-opinion">
             <div id="track-vs-text">
-              <div class="track-text" id="track-vs-agree">AGREE</div>
+              <div class="track-text" id="track-vs-agree" data-i18n="product.opinion.agree">AGREE</div>
               <div class="track-text" id="track-vs">VS</div>
-              <div class="track-text" id="track-vs-disagree">DISAGREE</div>
+              <div class="track-text" id="track-vs-disagree" data-i18n="product.opinion.disagree">DISAGREE</div>
             </div>
             <div id="track-bars">
               <div class="track-bar">
@@ -172,31 +182,31 @@
               </div>
             </div>
             <div class="track-result" id="track-perc">69%</div>
-            <div class="track-text track-result" id="track-result">of people agree with you</div>
+            <div class="track-text track-result" id="track-result" data-i18n="product.opinion.result">of people agree with you</div>
           </div>
           <br>
-          <h4>"How's it different?" 🤠</h4>
-          <p>It has a lot of pretty cool 🐧 stuff, like:</p>
+          <h4 data-i18n="product.title3">"How's it different?" 🤠</h4>
+          <p data-i18n="product.desc3">It has a lot of pretty cool 🐧 stuff, like:</p>
           <ul>
-            <li>Follow who you like</li>
-            <li>Friends</li>
-            <li>Messages</li>
-            <li>Comments</li>
-            <li>Statistics</li>
-            <li>Dark theme</li>
-            <li>Built with the newest technologies 🚀</li>
-            <li>Black magic</li>
-            <li>The name's pretty cool too, amirite? 😎</li>
+            <li data-i18n="product.features.li1">Follow who you like</li>
+            <li data-i18n="product.features.li2">Friends</li>
+            <li data-i18n="product.features.li3">Messages</li>
+            <li data-i18n="product.features.li4">Comments</li>
+            <li data-i18n="product.features.li5">Statistics</li>
+            <li data-i18n="product.features.li6">Dark theme</li>
+            <li data-i18n="product.features.li7">Built with the newest technologies 🚀</li>
+            <li data-i18n="product.features.li8">Black magic</li>
+            <li data-i18n="product.features.li9">The name's pretty cool too, amirite? 😎</li>
           </ul>
           <br>
-          <p>That's it folks! For now...</p>
+          <p data-i18n="product.desc4">That's it folks! For now...</p>
         </div>
-        <img src="./src/images/product/product.png">
+        <img id="product-phone" src="./src/images/product/product.png">
       </div>
       <div id="download">
-        <h4>Download</h4>
+        <h4 data-i18n="product.dl.title">Download</h4>
         <div id="downloadBox">
-          <h4>Coming soon!</h4>
+          <h4 data-i18n="product.dl.text">Coming soon!</h4>
         </div>
       </div>
     </section>
@@ -205,8 +215,8 @@
 
     <section class="flex-column" id="about">
       <div class="sectionContainer flex-column">
-        <h4 id="about-title"><span>"Wait a minute...</span><span>Who ARE you?"</span></h4>
-        <p id="about-desc">
+        <h4 id="about-title"><span data-i18n="about.title1-1">"Wait a minute...</span><span data-i18n="about.title1-2">Who ARE you?"</span></h4>
+        <p id="about-desc" data-i18n="about.desc">
           We are a team of developers from Switzerland with a passion for coding, with the desire to create something
           innovative and fun to use for everyone! 🎉
         </p>
@@ -216,9 +226,11 @@
               <div class="about-team-member-pers-trait">💡</div>
             </div>
             <h3 class="about-team-member-name">Daniel Fischer</h3>
-            <h4 class="about-team-member-role">🏢 Founder</h4>
-            <p>
-              I really like chicken nuggets and pizza 🍕<br><br>
+            <h4 class="about-team-member-role" data-i18n="about.daniel.role">🏢 Founder</h4>
+            <p data-i18n="about.daniel.desc">
+              I really like chicken nuggets and pizza 🍕
+            </p>
+            <p data-i18n="about.daniel.likes">
               Likes: Movies, Music, Animals, Gaming, Pizza, Coding, Science, Space & Technology
             </p>
             <div class="about-team-member-social">
@@ -243,9 +255,11 @@
               <div class="about-team-member-pers-trait">🧠</div>
             </div>
             <h3 class="about-team-member-name">Ignacio Utrilla</h3>
-            <h4 class="about-team-member-role">🏢 Co-Founder</h4>
-            <p>
-              I love my dog 🐶 and really enjoy sushi 🍣<br><br>
+            <h4 class="about-team-member-role" data-i18n="about.ignacio.role">🏢 Co-Founder</h4>
+            <p data-i18n="about.ignacio.desc">
+              I love my dog 🐶 and really enjoy sushi 🍣
+            </p>
+            <p data-i18n="about.ignacio.likes">
               Likes: Technology, Drawing, Travelling, Eating, Movies, Sleeping, Anime & Learning
             </p>
             <div class="about-team-member-social">
@@ -317,9 +331,9 @@
 
 <footer>
   <div id="sub-footer">
-    <img alt="Odys Group" class="img-fluid" draggable="false" id="footer-logo" src="src/images/footer/footer.svg">
+    <img alt="Oppy" class="img-fluid" draggable="false" id="footer-logo" src="src/images/footer/footer.svg">
     <div id="footer-icons">
-      <a href="mailto:" target="_blank">
+      <a href="mailto:contact@oppy.app" target="_blank">
         <svg version="1.1" viewBox="0 0 24 24"
              xmlns="http://www.w3.org/2000/svg">
           <path

@@ -634,7 +634,6 @@ hr {
 
 .cta-btn,
 #contactFormButton {
-  width: 300px;
   border: var(--border-width-button) solid transparent;
   cursor: pointer;
   text-transform: uppercase;
@@ -645,7 +644,7 @@ hr {
   border-radius: 5px;
   margin-top: 1rem;
   outline: none;
-  height: 70px;
+  font-size: 18px;
 }
 
 .cta-btn:hover,
@@ -653,10 +652,17 @@ hr {
   background: #42D2FF;
 }
 
-.cta-btn::after {
-  content: "🥳";
-  font-size: 22px;
-  margin-left: 5px;
+.cta-btn {
+  padding: 20px;
+  width: fit-content;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.cta-btn .emoji {
+  font-size: 26px;
+  margin-left: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -672,7 +678,7 @@ hr {
   height: fit-content;
 }
 
-.product-content img:nth-child(2) {
+#product-phone {
   align-self: center;
 }
 
@@ -680,7 +686,7 @@ hr {
   display: flex;
 }
 
-#product-content-top img:first-child {
+#product-pic {
   border-radius: 15px;
   margin-right: 60px;
 }
@@ -763,6 +769,10 @@ hr {
 
 #track-vs {
   font-size: 14px;
+}
+
+#track-vs-agree, #track-vs-disagree {
+  text-transform: uppercase;
 }
 
 #track-agree {
@@ -1015,7 +1025,7 @@ form {
 
 #contactFormButton {
   float: left;
-  width: calc(120px - 2 * var(--border-width-button));
+  width: auto;
   height: 50px;
   line-height: 45px;
 }

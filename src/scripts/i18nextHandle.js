@@ -31,6 +31,7 @@ const resources = {
 --------------------------------------------------------------*/
 const updateSelectedOption = () => {
   selectedOption.innerHTML = (i18next.language || window.localStorage.i18nextLng || '').toUpperCase();
+  parseEmojis();
 }
 
 const deactivateAnimationClasses = () => {
