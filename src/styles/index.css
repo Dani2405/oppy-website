@@ -196,7 +196,7 @@ select:-webkit-autofill:focus {
   width: 100%;
   top: 0;
   left: 0;
-  background: var(--background-color);
+  background: var(--element-color);
   z-index: 9999;
 
   opacity: 1;
@@ -514,7 +514,7 @@ section a:hover {
   width: fit-content;
   margin: 0;
   margin-bottom: 4rem;
-  font-size: 72px;
+  font-size: 4.5em;
 }
 
 section h4 {
@@ -658,6 +658,7 @@ hr {
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .cta-btn .emoji {
@@ -1133,6 +1134,10 @@ footer img {
     display: block !important;
   }
 
+  section h3 {
+    font-size: 2em;
+  }
+
   section h4 {
     font-size: 26px;
     margin-bottom: 15px;
@@ -1144,6 +1149,10 @@ footer img {
     margin-top: -25px;
   }
 
+  #cta-container img {
+     width: 75%;
+   }
+
   #cta-title {
     font-size: 1.6em !important;
   }
@@ -1152,13 +1161,18 @@ footer img {
     font-size: 18px;
   }
 
-  .product-content img {
+  .cta-btn {
+    font-size: 16px;
     width: 100%;
   }
 
-  #product-content-top img:first-child {
+  .product-content img:not(.emoji) {
+    width: 100%;
+  }
+
+  #product-pic {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
 
   #product-content-top, #product-content-bottom {
@@ -1205,12 +1219,6 @@ footer img {
   #footer-icons {
     height: 100px;
     align-items: flex-end;
-  }
-
-  button.cta-btn {
-    width: 200px;
-    font-size: 12px;
-    height: 50px;
   }
 }
 
