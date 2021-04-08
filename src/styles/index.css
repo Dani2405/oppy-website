@@ -196,7 +196,7 @@ select:-webkit-autofill:focus {
   width: 100%;
   top: 0;
   left: 0;
-  background: var(--background-color);
+  background: var(--element-color);
   z-index: 9999;
 
   opacity: 1;
@@ -514,7 +514,7 @@ section a:hover {
   width: fit-content;
   margin: 0;
   margin-bottom: 4rem;
-  font-size: 72px;
+  font-size: 4.5em;
 }
 
 section h4 {
@@ -613,7 +613,7 @@ hr {
   display: flex;
 }
 
-#cta-container img {
+#cta-img {
   width: 40%;
 }
 
@@ -634,7 +634,6 @@ hr {
 
 .cta-btn,
 #contactFormButton {
-  width: 300px;
   border: var(--border-width-button) solid transparent;
   cursor: pointer;
   text-transform: uppercase;
@@ -645,7 +644,7 @@ hr {
   border-radius: 5px;
   margin-top: 1rem;
   outline: none;
-  height: 70px;
+  font-size: 18px;
 }
 
 .cta-btn:hover,
@@ -653,10 +652,18 @@ hr {
   background: #42D2FF;
 }
 
-.cta-btn::after {
-  content: "🥳";
-  font-size: 22px;
-  margin-left: 5px;
+.cta-btn {
+  padding: 15px;
+  width: fit-content;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-btn .emoji {
+  font-size: 26px;
+  margin-left: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -672,7 +679,7 @@ hr {
   height: fit-content;
 }
 
-.product-content img:nth-child(2) {
+#product-phone {
   align-self: center;
 }
 
@@ -680,9 +687,10 @@ hr {
   display: flex;
 }
 
-#product-content-top img:first-child {
+#product-pic {
   border-radius: 15px;
   margin-right: 60px;
+  align-self: center;
 }
 
 #product-content-top {
@@ -713,6 +721,7 @@ hr {
 
 #track-opinion-text {
   text-align: center;
+  margin-top: 75px;
 }
 
 #track-opinion {
@@ -763,6 +772,10 @@ hr {
 
 #track-vs {
   font-size: 14px;
+}
+
+#track-vs-agree, #track-vs-disagree {
+  text-transform: uppercase;
 }
 
 #track-agree {
@@ -1015,7 +1028,7 @@ form {
 
 #contactFormButton {
   float: left;
-  width: calc(120px - 2 * var(--border-width-button));
+  width: auto;
   height: 50px;
   line-height: 45px;
 }
@@ -1123,6 +1136,10 @@ footer img {
     display: block !important;
   }
 
+  section h3 {
+    font-size: 2em;
+  }
+
   section h4 {
     font-size: 26px;
     margin-bottom: 15px;
@@ -1134,6 +1151,10 @@ footer img {
     margin-top: -25px;
   }
 
+  #cta-img {
+     width: 75%;
+   }
+
   #cta-title {
     font-size: 1.6em !important;
   }
@@ -1142,13 +1163,18 @@ footer img {
     font-size: 18px;
   }
 
-  .product-content img {
+  .cta-btn {
+    font-size: 16px;
     width: 100%;
   }
 
-  #product-content-top img:first-child {
+  .product-content img:not(.emoji) {
+    width: 100%;
+  }
+
+  #product-pic {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
 
   #product-content-top, #product-content-bottom {
@@ -1167,6 +1193,7 @@ footer img {
     padding: 5%;
     text-align: center;
     width: 100%;
+    border-radius: 10px;
   }
 
   #about-title *:last-child {
@@ -1196,12 +1223,6 @@ footer img {
     height: 100px;
     align-items: flex-end;
   }
-
-  button.cta-btn {
-    width: 200px;
-    font-size: 12px;
-    height: 50px;
-  }
 }
 
 @media (orientation: landscape) and (max-width: 850px) {
@@ -1223,7 +1244,7 @@ footer img {
     flex-direction: column-reverse;
   }
 
-  #cta-container img {
+  #cta-img {
     align-self: center;
     margin-bottom: 2rem;
     margin-left: 1.2rem;
@@ -1267,14 +1288,14 @@ footer img {
 }
 
 @media only screen and (max-width: 375px) {
-  #cta-container img {
+  #cta-img {
     width: 60%;
     margin-bottom: 1rem;
   }
 }
 
 @media only screen and (max-width: 360px) {
-  #cta-container img {
+  #cta-img {
     display: none;
   }
 
