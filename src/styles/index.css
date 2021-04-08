@@ -613,7 +613,7 @@ hr {
   display: flex;
 }
 
-#cta-container img {
+#cta-img {
   width: 40%;
 }
 
@@ -653,7 +653,7 @@ hr {
 }
 
 .cta-btn {
-  padding: 20px;
+  padding: 15px;
   width: fit-content;
   text-decoration: none;
   display: flex;
@@ -690,6 +690,7 @@ hr {
 #product-pic {
   border-radius: 15px;
   margin-right: 60px;
+  align-self: center;
 }
 
 #product-content-top {
@@ -720,6 +721,7 @@ hr {
 
 #track-opinion-text {
   text-align: center;
+  margin-top: 75px;
 }
 
 #track-opinion {
@@ -1149,7 +1151,7 @@ footer img {
     margin-top: -25px;
   }
 
-  #cta-container img {
+  #cta-img {
      width: 75%;
    }
 
@@ -1191,6 +1193,7 @@ footer img {
     padding: 5%;
     text-align: center;
     width: 100%;
+    border-radius: 10px;
   }
 
   #about-title *:last-child {
@@ -1241,7 +1244,7 @@ footer img {
     flex-direction: column-reverse;
   }
 
-  #cta-container img {
+  #cta-img {
     align-self: center;
     margin-bottom: 2rem;
     margin-left: 1.2rem;
@@ -1285,14 +1288,14 @@ footer img {
 }
 
 @media only screen and (max-width: 375px) {
-  #cta-container img {
+  #cta-img {
     width: 60%;
     margin-bottom: 1rem;
   }
 }
 
 @media only screen and (max-width: 360px) {
-  #cta-container img {
+  #cta-img {
     display: none;
   }
 
