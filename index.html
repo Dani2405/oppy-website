@@ -28,8 +28,8 @@
   <!-- Script to render emojis as Twemojis -->
   <script>
     window.onload = function () {
+      parseEmojis();
     }
-    parseEmojis();
 
     function parseEmojis() {
       // Parses the document body and
@@ -38,6 +38,7 @@
         {folder: 'svg', ext: '.svg'} // This is to specify to Twemoji to use SVGs and not PNGs
       );
     }
+    parseEmojis();
   </script>
 
   <!-- Fonts -->
