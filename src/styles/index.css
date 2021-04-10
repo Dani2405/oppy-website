@@ -884,14 +884,18 @@ hr {
   width: 300px;
   border-radius: 100%;
   border: 5px solid #4e4e4e;
+  background-color: white;
+  background-size: 115%;
+  background-position: center bottom;
 }
 
 #about-team-member-pic-daniel {
-  background-image: url("../images/about/Daniel.png");
+  background-image: url("../images/about/Daniel.svg");
+
 }
 
 #about-team-member-pic-ignacio {
-  background-image: url("../images/about/Ignacio.png");
+  background-image: url("../images/about/Ignacio.svg");
 }
 
 .about-team-member-pers-trait {
