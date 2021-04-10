@@ -207,13 +207,6 @@ function showPage() {
   cover.classList.add(hideClass);
 }
 
-/**
- * Hide page
- */
-function hidePage() {
-  cover.classList.remove(hideClass);
-}
-
 function onClickHamburger() {
   hamburger.classList.toggle("change");
   headerNav.classList.toggle(headerMobileOpenNavStyleClass);
@@ -231,38 +224,6 @@ function updateDeviceType() {
   mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
     navigator.userAgent
   );
-}
-
-/**
- * Function to check if element is currently being displayed on the screen
- * arguments: ID of the element to check
- */
-function isDisplayed(elSelector) {
-  let element = document.querySelector(elSelector);
-
-  var top = element.offsetTop;
-  var height = element.offsetHeight - smallHeaderHeight;
-
-  return (
-    top < window.pageYOffset + window.innerHeight &&
-    top + height > window.pageYOffset
-  );
-}
-
-/**
- * Function to check if the element is in view, if it is, start animation
- */
-function animateSection(elementSelector, querySelector, animation) {
-  let elements = document.querySelectorAll(querySelector);
-  let element = document.querySelector(querySelector);
-
-  if (isDisplayed(elementSelector) && !element.classList.contains(animation)) {
-    elements.forEach(function (el, index) {
-      setTimeout(function () {
-        el.classList.add(animation);
-      }, 150 * index);
-    });
-  }
 }
 
 /**
@@ -318,7 +279,7 @@ contactForm.addEventListener("submit", function (ev) {
 
   const data = JSON.stringify(Object.fromEntries(new FormData(contactForm)));
 
-  fetch("https://formspree.io/xwkqwoeq", {
+  fetch("https://formspree.io/f/xzbybdnr", {
     method: "POST",
     body: data,
     headers: {

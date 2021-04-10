@@ -2,51 +2,54 @@
 <html lang="en">
 
 <head>
+  <!-- Load the JavaScript API for reCAPTCHA v2  -->
+  <script type="text/javascript">
+    var onloadCallback = function () {
+      grecaptcha.render('reCAPTCHA', {
+        'sitekey': '6LfRIpwaAAAAAKXm_3qBpnTLOTd_MRJT8Xx7Lpvk'
+      });
+    };
+  </script>
 
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
-  <meta data-i18n="page.metadata.description" name="description">
+  <meta name="description" content="Share your opinion with the world! See what everyone REALLY thinks">
   <meta content="#14181B" name="theme-color">
 
   <link href="index.html" rel="canonical">
-  <title data-i18n="page.title"></title>
+  <title>Oppy</title>
 
   <!-- Favicon -->
   <link href="src/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
+  <!-- Emojis -->
+  <script crossorigin="anonymous" src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
+  <!-- Script to render emojis as Twemojis -->
+  <script>
+    window.onload = function () {
+      parseEmojis();
+    }
+
+    function parseEmojis() {
+      // Parses the document body and
+      // inserts <img> tags in place of Unicode Emojis
+      twemoji.parse(document.body,
+        {folder: 'svg', ext: '.svg'} // This is to specify to Twemoji to use SVGs and not PNGs
+      );
+    }
+    parseEmojis();
+  </script>
+
   <!-- Fonts -->
   <link href="https://use.typekit.net/vlj5xpq.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap" rel="stylesheet">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap"
+        rel="stylesheet">
 
   <!-- CSS -->
   <link href="./src/styles/index.css" rel="stylesheet">
   <link href="./src/styles/animate.css" rel="stylesheet">
-
-  <!-- If we have multiple versions of a page for different languages or regions (SEO) -->
-  <link href="https://odys-group.com/?lng=en" hreflang="en" rel="alternate"/>
-  <link href="https://odys-group.com/?lng=it" hreflang="it" rel="alternate"/>
-  <link href="https://odys-group.com/?lng=es" hreflang="es" rel="alternate"/>
-  <link href="https://odys-group.com/?lng=de" hreflang="de" rel="alternate"/>
-
-  <!-- i18next -->
-  <script crossorigin="anonymous"
-          integrity="sha512-jo5XdJ3bl+V8VIA0YCtx89lVW1F8J51ObQiMD02rxU8ihOd7qkq9awA4wni6MVKwa50cg1z5qY4kO+LFE5Ahjg=="
-          src="https://cdnjs.cloudflare.com/ajax/libs/i18next/19.7.0/i18next.js"></script>
-  <script
-    crossorigin="anonymous"
-    integrity="sha512-6TmXG6H4+8CXhdp644DW6aEPp+deE7pxkqSIx+LaoKAH4HcM7Vxbe7vOV1RB0rWVABQHD2D2q6XArz6p5R/wKA=="
-    src="https://cdnjs.cloudflare.com/ajax/libs/i18next-browser-languagedetector/6.0.1/i18nextBrowserLanguageDetector.min.js"></script>
-  <script>
-    window.languages = window.languages || {};
-    window.languages.defaultLng = 'en';
-  </script>
-  <script src="src/locales/en/translation.js" type="module"></script>
-  <script src="src/locales/de/translation.js" type="module"></script>
-  <script src="src/locales/es/translation.js" type="module"></script>
-  <script src="src/locales/it/translation.js" type="module"></script>
-  <script defer src="src/scripts/i18nextHandle.js"></script>
 </head>
 
 <body>
@@ -55,7 +58,7 @@
 <header id="header">
   <div class="header-container">
     <div class="header-container__left">
-      <img alt="Odys Group, personalized applications and websites" class="animated fadeIn" draggable="false"
+      <img alt="Oppy" class="animated fadeIn" draggable="false"
            id="header-logo" src="src/images/logo_name.svg">
     </div>
     <div class="header-container__right">
@@ -67,40 +70,25 @@
 
       <nav>
         <ul class="animated fadeIn">
-          <li><a data-i18n="product.title" href="#product"></a></li>
-          <li><a data-i18n="about.title" href="#about"></a></li>
-          <li><a data-i18n="news.title" href="#news"></a></li>
-          <li><a data-i18n="contact.title" href="#contact"></a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#about">Team</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-
-      <div id="box-container">
-        <div id="selected-container">
-          <button id="selected-option"></button>
-          <i class="material-icons">keyboard_arrow_down</i>
-        </div>
-        <div id="options-container">
-          <button class="option" value="EN">EN</button>
-          <button class="option" value="IT">IT</button>
-          <button class="option" value="DE">DE</button>
-          <button class="option" value="ES">ES</button>
-        </div>
-      </div>
-
     </div>
-
-
   </div>
-
 </header>
 
 <div id="home">
   <div id="cta-container">
-      <div id="cta-text-container">
-        <h1 id="cta-title">Share your opinion with the world!</h1>
-        <p id="cta-subtitle">See what everyone REALLY thinks</p>
-      </div>
-      <img alt="Preview" draggable="false" src="./src/images/home/home.png">
+    <div id="cta-text-container">
+      <h1 id="cta-title">Share your opinion with the world!</h1>
+      <p id="cta-subtitle">See what everyone REALLY thinks</p>
+      <a class="cta-btn" href="https://www.indiegogo.com/projects/oppy" target="_blank">BACK OUR PROJECT 🥳</a>
+    </div>
+    <img alt="Preview" id="cta-img" draggable="false" src="./src/images/home/home.png">
   </div>
 </div>
 
@@ -108,34 +96,167 @@
   <div class="section-container">
     <section class="flex-column" id="product">
       <h3 class="section-title">Product</h3>
-      <img src="./src/images/product/product.jpg">
+      <div class="product-content" id="product-content-top">
+        <img id="product-pic" src="./src/images/product/product.jpg">
+        <div class="product-content-text" id="product-content-top-text">
+          <h4>"Hey, what's Oppy?" 😮</h4>
+          <p>
+            First of all, it's an app available for iOS and Android, you dingus!! 🤓
+          </p>
+          <p>
+            Oppy is a social media app built in Flutter, with the purpose to create a place where you can say what you
+            REALLY think, anonymously or not.
+          </p>
+          <p>
+            The app is currently in development and needs funding, so please consider donating (even just a tiny bit 🤏)
+            to our <a href="https://www.indiegogo.com/projects/oppy" target="_blank">Indiegogo project to help us
+            out</a>! 🤗 We will be forever grateful
+          </p>
+        </div>
+      </div>
+      <div class="product-content" id="product-content-bottom">
+        <div class="product-content-text" id="product-content-bottom-text">
+          <h4>"What does it do?" 🤔</h4>
+          <p>
+            Exactly what you want! (crazy, I know)
+          </p>
+          <p>
+            You want to share an <span class="strike-through">unpopular</span> opinion? Say less!
+          </p>
+          <p>
+            Oppy is the place for you! Keep track of how many people <span class="strike-through">dis</span>agree with
+            you and see/share what other people think!
+          </p>
+          <p id="track-opinion-text">"I think pizza should be a Human Right!"</p>
+          <div id="track-opinion">
+            <div id="track-vs-text">
+              <div class="track-text" id="track-vs-agree">AGREE</div>
+              <div class="track-text" id="track-vs">VS</div>
+              <div class="track-text" id="track-vs-disagree">DISAGREE</div>
+            </div>
+            <div id="track-bars">
+              <div class="track-bar">
+                <div id="track-agree"></div>
+              </div>
+              <div class="track-bar">
+                <div id="track-disagree"></div>
+              </div>
+            </div>
+            <div class="track-result" id="track-perc">69%</div>
+            <div class="track-text track-result" id="track-result">of people agree with you</div>
+          </div>
+          <br>
+          <h4>"How's it different?" 🤠</h4>
+          <p>It has a lot of pretty cool 🐧 stuff, like:</p>
+          <ul>
+            <li>Follow who you like</li>
+            <li>Friends</li>
+            <li>Messages</li>
+            <li>Comments</li>
+            <li>Statistics</li>
+            <li>Dark theme</li>
+            <li>Built with the newest technologies 🚀</li>
+            <li>Black magic</li>
+            <li>The name's pretty cool too, amirite? 😎</li>
+          </ul>
+          <br>
+          <p>That's it folks! For now...</p>
+        </div>
+        <img id="product-phone" src="./src/images/product/product.png">
+      </div>
+      <div id="download">
+        <h4>Download</h4>
+        <div id="downloadBox">
+          <h4>Coming soon!</h4>
+        </div>
+      </div>
     </section>
 
     <hr>
 
     <section class="flex-column" id="about">
-      <h3 class="section-title" data-i18n="about.title"></h3>
       <div class="sectionContainer flex-column">
-        <h4 data-i18n="about.what_is_odys"></h4>
-        <p data-i18n="about.what_is_odys_text"></p>
-
-        <h4 data-i18n="about.what_do_we_do"></h4>
-        <p data-i18n="about.what_do_we_do_text"></p>
+        <h4 id="about-title"><span>"Wait a minute...</span><span>Who ARE you?"</span></h4>
+        <p id="about-desc">
+          We are a team of developers from Switzerland with a passion for coding, with the desire to create something
+          innovative and fun to use for everyone! 🎉
+        </p>
+        <div id="about-team">
+          <div class="about-team-member">
+            <div class="about-team-member-pic" id="about-team-member-pic-daniel">
+              <div class="about-team-member-pers-trait">💡</div>
+            </div>
+            <h3 class="about-team-member-name">Daniel Fischer</h3>
+            <h4 class="about-team-member-role">🏢 Founder</h4>
+            <p>
+              I really like chicken nuggets and pizza 🍕
+            </p>
+            <p>
+              Likes: movies, music, animals, gaming, pizza, coding, science, space & technology
+            </p>
+            <div class="about-team-member-social">
+              <a href="https://www.instagram.com/dani2405_" target="_blank">
+                <svg version="1.1"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                </svg>
+              </a>
+              <a href="https://github.com/Dani2405" target="_blank">
+                <svg version="1.1"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="about-team-member">
+            <div class="about-team-member-pic" id="about-team-member-pic-ignacio">
+              <div class="about-team-member-pers-trait">🧠</div>
+            </div>
+            <h3 class="about-team-member-name">Ignacio Utrilla</h3>
+            <h4 class="about-team-member-role">🏢 Co-Founder</h4>
+            <p>
+              I love my dog 🐶 and really enjoy sushi 🍣
+            </p>
+            <p>
+              Likes: technology, drawing, travelling, eating, movies, sleeping, anime & learning
+            </p>
+            <div class="about-team-member-social">
+              <a href="https://www.instagram.com/ignacio_utrilla" target="_blank">
+                <svg version="1.1"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                </svg>
+              </a>
+              <a href="https://github.com/IgnacioUtrilla" target="_blank">
+                <svg version="1.1"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <hr>
 
     <section class="flex-column" id="contact">
-      <h3 class="section-title" data-i18n="contact.title"></h3>
+      <h3 class="section-title">Contact</h3>
       <div class="section-content" id="form-container">
-        <form action="https://formspree.io/xwkqwoeq" id="contactForm" method="POST">
+        <form action="https://formspree.io/f/xzbybdnr" id="contactForm" method="POST">
           <div class="form-field">
             <div class="input-title">
               <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" />
+                <path
+                  d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z"/>
               </svg>
-              <label data-i18n="contact.email" for="email"></label>
+              <label for="email">Email</label>
             </div>
             <input autocomplete="email" class="form-input" id="email" name="email" required type="email">
           </div>
@@ -143,17 +264,19 @@
           <div class="form-field">
             <div class="input-title">
               <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                <path d="M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H6L2,22V4C2,2.89 2.9,2 4,2H20M4,4V17.17L5.17,16H20V4H4M6,7H18V9H6V7M6,11H15V13H6V11Z" />
+                <path
+                  d="M20,2A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H6L2,22V4C2,2.89 2.9,2 4,2H20M4,4V17.17L5.17,16H20V4H4M6,7H18V9H6V7M6,11H15V13H6V11Z"/>
               </svg>
-              <label data-i18n="contact.message" for="message"></label>
+              <label for="message">Message</label>
             </div>
             <textarea autocomplete="off" class="form-input" id="message" name="message" required type="text"></textarea>
           </div>
-
           <input name="_subject" type="hidden" value="Contact Form"/>
-          <input class="form-input" data-i18n="contact.send" id="contactFormButton" type="submit">
+          <div class="g-recaptcha" data-theme="dark" id="reCAPTCHA"></div>
+          <input class="form-input" id="contactFormButton" type="submit" value="Send">
           <p id="contactFormStatus"></p>
         </form>
+        <img alt="Contact" src="./src/images/contact/contact.svg">
       </div>
     </section>
 
@@ -161,16 +284,18 @@
 
   <a id="up-button">
     <svg style="width:48px;height:48px;" viewBox="0 0 24 24">
-      <path fill="#FFF" ng-attr-d="{{icon.data}}" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"></path>
+      <path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" fill="#FFF"
+            ng-attr-d="{{icon.data}}"></path>
     </svg>
   </a>
 </div>
 
 <footer>
-  <div id="sub-footer">
-    <img alt="Odys Group" class="img-fluid" draggable="false" id="footer-logo" src="src/images/footer/footer.svg">
+  <div id="top-footer">
+    <img alt="Oppy" class="img-fluid" draggable="false" id="footer-logo" src="src/images/footer/footer.svg">
+
     <div id="footer-icons">
-      <a href="mailto:" target="_blank">
+      <a href="mailto:contact@oppy.app" target="_blank">
         <svg version="1.1" viewBox="0 0 24 24"
              xmlns="http://www.w3.org/2000/svg">
           <path
@@ -196,11 +321,17 @@
     </div>
   </div>
 
+  <div id="bottom-footer">
+    <p>Copyright © 2021 Oppy</p>
+    <a href="https://odys-group.com/">Created by Odys Group</a>
+  </div>
+
 
 </footer>
 
 <!-- Javascript -->
 <script src="src/scripts/script.js"></script>
+<script async defer src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"></script>
 </body>
 
 </html>
