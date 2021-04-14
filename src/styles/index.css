@@ -631,6 +631,7 @@ hr {
 
 #cta-img {
   width: 40%;
+  height: 40%;
 }
 
 #cta-text-container {
@@ -707,9 +708,7 @@ hr {
 
 .product-content img:not(.emoji) {
   width: 50%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: auto;
 }
 
 #product-phone {
