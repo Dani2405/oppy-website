@@ -661,7 +661,7 @@ hr {
   border: var(--border-width-button) solid transparent;
   cursor: pointer;
   text-transform: uppercase;
-  background: #00a1e7;
+  background: white;
   color: #000;
   font-weight: bold;
   letter-spacing: 2px;
@@ -673,7 +673,7 @@ hr {
 
 .cta-btn:hover,
 #contactFormButton:hover {
-  background: #42d2ff;
+  background: #c3c3c3;
 }
 
 .cta-btn {
@@ -839,7 +839,7 @@ hr {
 }
 
 .track-result {
-  color: #00672a;
+  color: #008837;
   text-align: center;
   font-weight: bold;
 }
