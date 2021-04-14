@@ -17,7 +17,7 @@
   <meta name="description" content="Share your opinion with the world! See what everyone REALLY thinks">
   <meta content="#14181B" name="theme-color">
 
-  <link href="index.html" rel="canonical">
+  <link href="https://oppy.app" rel="canonical">
   <title>Oppy</title>
 
   <!-- Favicon -->
@@ -27,18 +27,22 @@
   <script crossorigin="anonymous" src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
   <!-- Script to render emojis as Twemojis -->
   <script>
-    window.onload = function () {
-      parseEmojis();
-    }
+    try {
+      window.onload = function () {
+        parseEmojis();
+      }
 
-    function parseEmojis() {
-      // Parses the document body and
-      // inserts <img> tags in place of Unicode Emojis
-      twemoji.parse(document.body,
-        {folder: 'svg', ext: '.svg'} // This is to specify to Twemoji to use SVGs and not PNGs
-      );
+      function parseEmojis() {
+        // Parses the document body and
+        // inserts <img> tags in place of Unicode Emojis
+        twemoji.parse(document.body,
+          {folder: 'svg', ext: '.svg'} // This is to specify to Twemoji to use SVGs and not PNGs
+        );
+      }
+      parseEmojis();
+    } catch (e) {
+      // ignore error
     }
-    parseEmojis();
   </script>
 
   <!-- Fonts -->
@@ -117,7 +121,7 @@
     <section class="flex-column" id="product">
       <h3 class="section-title">Product</h3>
       <div class="product-content" id="product-content-top">
-        <img id="product-pic" src="./src/images/product/product.jpg">
+        <img id="product-pic" src="./src/images/product/product.jpg" alt="Oppy example chat">
         <div class="product-content-text" id="product-content-top-text">
           <h4>"Hey, what's Oppy?" 😮</h4>
           <p>
@@ -182,7 +186,7 @@
           <br>
           <p>That's it folks! For now...</p>
         </div>
-        <img id="product-phone" src="./src/images/product/product.png">
+        <img id="product-phone" src="./src/images/product/product.png" alt="Oppy example image">
       </div>
       <div id="download">
         <h4>Download</h4>
