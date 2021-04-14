@@ -662,7 +662,7 @@ hr {
   cursor: pointer;
   text-transform: uppercase;
   background: #00a1e7;
-  color: white;
+  color: #000;
   font-weight: bold;
   letter-spacing: 2px;
   border-radius: 5px;
@@ -839,7 +839,7 @@ hr {
 }
 
 .track-result {
-  color: #53cc84;
+  color: #00672a;
   text-align: center;
   font-weight: bold;
 }
