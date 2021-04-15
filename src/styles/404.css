@@ -101,10 +101,9 @@ a:hover {
   width: 300px;
   border: var(--border-width-button) solid transparent;
   cursor: pointer;
-  background: #00A1E7;
-  color: white;
+  background: #fff;
   letter-spacing: 2px;
-  border-radius: 5px;
+  border-radius: 50px;
   margin-top: 1rem;
   outline: none;
   height: 70px;
@@ -112,7 +111,7 @@ a:hover {
 }
 
 .btn:hover {
-  background: #42D2FF;
+  background: #c3c3c3;
 }
 
 #credits {

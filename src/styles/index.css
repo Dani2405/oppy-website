@@ -618,6 +618,10 @@ hr {
   justify-content: center;
   height: 100vh;
   background-color: var(--element-color);
+  background-image: url("../images/home/TRBubbles.png"), url("../images/home/BLBubbles.png");
+  background-repeat: no-repeat;
+  background-position: top 80px right, left bottom 25px;
+  background-size: 200px;
 }
 
 #cta-container {
@@ -665,7 +669,7 @@ hr {
   color: #000;
   font-weight: bold;
   letter-spacing: 2px;
-  border-radius: 5px;
+  border-radius: 50px;
   margin-top: 1rem;
   outline: none;
   font-size: 18px;
@@ -1257,6 +1261,10 @@ footer a {
   }
 
   /* ## Home */
+  #home {
+    background-size: 75px;
+  }
+
   #cta-container {
     width: 80%;
     margin-top: -25px;
@@ -1396,7 +1404,6 @@ footer a {
     -ms-grid-row-align: center;
     align-self: center;
     margin-bottom: 2rem;
-    margin-left: 1.2rem;
     width: 70%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
