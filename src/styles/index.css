@@ -10,6 +10,7 @@
 # Content
     ## Home
     ## Product
+    ## Funding
     ## About
     ## Contact
 # Footer
@@ -660,8 +661,7 @@ hr {
   font-size: 1.5em;
 }
 
-.cta-btn,
-#contactFormButton {
+.btn {
   border: var(--border-width-button) solid transparent;
   cursor: pointer;
   text-transform: uppercase;
@@ -673,15 +673,14 @@ hr {
   margin-top: 1rem;
   outline: none;
   font-size: 18px;
+  padding: 15px;
 }
 
-.cta-btn:hover,
-#contactFormButton:hover {
+.btn:hover {
   background: #c3c3c3;
 }
 
-.cta-btn {
-  padding: 15px;
+#cta-btn {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -697,7 +696,7 @@ hr {
   justify-content: center;
 }
 
-.cta-btn .emoji {
+#cta-btn .emoji {
   font-size: 26px;
   margin-left: 10px;
 }
@@ -893,6 +892,27 @@ hr {
 #downloadBox img {
   width: auto;
   height: 75px;
+}
+
+/*--------------------------------------------------------------
+## Funding
+--------------------------------------------------------------*/
+#funding {
+
+}
+
+#funding-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#funding-desc {
+  width: 50%;
+}
+
+#funding-indiegogo {
+  width: 50%;
+  margin-left: 75px;
 }
 
 /*--------------------------------------------------------------
@@ -1108,13 +1128,6 @@ form {
   line-height: 24px;
 }
 
-#contactFormButton {
-  float: left;
-  width: auto;
-  height: 50px;
-  line-height: 45px;
-}
-
 #contactFormStatus {
   clear: both;
   padding-top: 10px;
@@ -1282,7 +1295,7 @@ footer a {
     font-size: 18px;
   }
 
-  .cta-btn {
+  #cta-btn {
     font-size: 16px;
     width: 100%;
   }
@@ -1410,7 +1423,7 @@ footer a {
     height: fit-content;
   }
 
-  button.cta-btn {
+  button#cta-btn {
     width: 100%;
   }
 
