@@ -919,6 +919,7 @@ hr {
 #funding-indiegogo {
   width: 50%;
   margin-left: 75px;
+  align-self: center;
 }
 
 #funding-bar-goal {
