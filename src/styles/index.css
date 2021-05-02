@@ -10,6 +10,7 @@
 # Content
     ## Home
     ## Product
+    ## Funding
     ## About
     ## Contact
 # Footer
@@ -660,8 +661,7 @@ hr {
   font-size: 1.5em;
 }
 
-.cta-btn,
-#contactFormButton {
+.btn {
   border: var(--border-width-button) solid transparent;
   cursor: pointer;
   text-transform: uppercase;
@@ -673,15 +673,16 @@ hr {
   margin-top: 1rem;
   outline: none;
   font-size: 18px;
-}
-
-.cta-btn:hover,
-#contactFormButton:hover {
-  background: #c3c3c3;
-}
-
-.cta-btn {
   padding: 15px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #c3c3c3;
+  color: initial;
+}
+
+#cta-btn {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -697,7 +698,7 @@ hr {
   justify-content: center;
 }
 
-.cta-btn .emoji {
+#cta-btn .emoji {
   font-size: 26px;
   margin-left: 10px;
 }
@@ -893,6 +894,58 @@ hr {
 #downloadBox img {
   width: auto;
   height: 75px;
+}
+
+/*--------------------------------------------------------------
+## Funding
+--------------------------------------------------------------*/
+#funding {
+
+}
+
+#funding-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+#funding-desc {
+  width: 50%;
+}
+
+#funding-goal {
+  margin-top: 15px;
+}
+
+#funding-indiegogo {
+  width: 50%;
+  margin-left: 75px;
+  align-self: center;
+}
+
+#funding-bar-goal {
+  width: 100%;
+  background: #e2e2e2;
+  border: 5px solid white;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+#funding-bar {
+  width: 1%;
+  background: #53CC84;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+#funding-goal-perc {
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#funding-btn {
+  display: flex;
+  justify-content: center;
 }
 
 /*--------------------------------------------------------------
@@ -1108,13 +1161,6 @@ form {
   line-height: 24px;
 }
 
-#contactFormButton {
-  float: left;
-  width: auto;
-  height: 50px;
-  line-height: 45px;
-}
-
 #contactFormStatus {
   clear: both;
   padding-top: 10px;
@@ -1282,7 +1328,7 @@ footer a {
     font-size: 18px;
   }
 
-  .cta-btn {
+  #cta-btn {
     font-size: 16px;
     width: 100%;
   }
@@ -1294,6 +1340,10 @@ footer a {
   #product-pic {
     margin: 0;
     margin-bottom: 50px;
+  }
+
+  #product-content-top {
+    margin-bottom: 20px;
   }
 
   #product-content-top,
@@ -1327,6 +1377,26 @@ footer a {
     width: 100%;
     border-radius: 10px;
   }
+
+  /* ## Funding */
+  #funding {
+    margin-bottom: 75px;
+  }
+
+  #funding-content {
+    flex-direction: column;
+  }
+
+  #funding-desc {
+    width: 100%;
+  }
+
+  #funding-indiegogo {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* ## About */
 
   #about-title *:last-child {
     font-size: 32px;
@@ -1410,7 +1480,7 @@ footer a {
     height: fit-content;
   }
 
-  button.cta-btn {
+  button#cta-btn {
     width: 100%;
   }
 

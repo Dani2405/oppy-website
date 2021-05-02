@@ -106,6 +106,7 @@
         <ul class="animated fadeIn">
           <li><a href="#product">Product</a></li>
           <li><a href="#download">Download</a></li>
+          <li><a href="#funding">Funding</a></li>
           <li><a href="#about">Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -119,7 +120,7 @@
     <div id="cta-text-container">
       <h1 id="cta-title">Share your opinion with the world!</h1>
       <p id="cta-subtitle">See what everyone REALLY thinks</p>
-      <a class="cta-btn" href="https://www.indiegogo.com/projects/oppy" target="_blank">BACK OUR PROJECT 🥳</a>
+      <a id="cta-btn" class="btn" href="https://www.indiegogo.com/projects/oppy" target="_blank">BACK OUR PROJECT 🥳</a>
     </div>
     <img alt="Preview" id="cta-img" draggable="false" src="./src/images/home/home.png">
   </div>
@@ -202,6 +203,47 @@
         <div id="downloadBox">
           <h4>Coming soon!</h4>
         </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="flex-column" id="funding">
+      <div class="sectionContainer flex-column">
+        <h3 class="section-title">Funding</h3>
+        <div id="funding-content">
+          <div id="funding-desc">
+            <h4>"How can I help?" 🧐</h4>
+            <p>
+              The app is currently in development and needs funding.
+            </p>
+            <p>
+              Please consider <a href="https://www.indiegogo.com/projects/oppy" target="_blank">backing our
+              Indiegogo project</a> to help us out, even a small amount will be of great help 🪙
+            </p>
+            <p>
+              Get great perks in exchange, like Early-Access and an ad-free experience.
+            </p>
+            <p>
+              Plus, we will be forever grateful!
+            </p>
+          </div>
+          <div id="funding-indiegogo">
+            <svg aria-labelledby="" alt="Indiegogo logo" role="img" style="width: 100%; fill: #e51075" title="Indiegogo logo">
+              <title>
+                Indiegogo logo
+              </title>
+              <svg viewBox="0 0 160 24" id="v-logo">
+                <path d="M.143 1.1h6.045v22.083H.143V1.1zm21.496 10.222h.09V1.1h5.769v22.083h-5.555l-6.93-11.472-.091-.002v11.474H9.184V1.1h6.35l6.105 10.222zm20.902.834c0-5.543-1.556-5.691-4.122-5.691h-1.861v11.62h2.107c2.259 0 3.876-.355 3.876-5.93zM30.515 1.1h7.509c7.204 0 10.652 1.908 10.652 11.027 0 9.297-3.388 11.056-10.561 11.056h-7.6V1.1zm20.326 0h6.044v22.083H50.84V1.1zm55.979 17.135c3.297 0 3.755-2.236 3.755-5.87 0-3.606-.458-5.841-3.755-5.841-3.327 0-3.785 2.235-3.785 5.84 0 3.635.458 5.871 3.785 5.871zm0-17.403c8.424 0 9.89 5.393 9.89 11.324 0 5.9-1.495 11.295-9.89 11.295-8.424 0-9.92-5.394-9.92-11.295 0-5.931 1.496-11.324 9.92-11.324zm42.366 17.403c3.294 0 3.754-2.236 3.754-5.87 0-3.606-.46-5.841-3.754-5.841-3.327 0-3.786 2.235-3.786 5.84 0 3.635.459 5.871 3.786 5.871zm0-17.403c8.424 0 9.889 5.393 9.889 11.324 0 5.9-1.495 11.295-9.889 11.295-8.425 0-9.922-5.394-9.922-11.295 0-5.931 1.497-11.324 9.922-11.324zM85.31 14.66l.667-4.8h8.757v13.322h-5.558c-.973.18-2.102.268-3.416.268-7.417 0-9.249-4.62-9.249-11.295 0-7.658 2.504-11.324 10.317-11.324 2.808 0 5.311.714 7.022 1.788l-3.236 4.918c-1.038-.568-2.29-1.014-4.06-1.014-2.382 0-3.969.626-3.969 5.811 0 4.977.948 6.228 3.726 6.228 2.977 0 2.899-1.076 2.899-3.516v-.386h-3.9zm42.365 0l.667-4.8h8.757v13.322h-5.558c-.973.18-2.102.268-3.416.268-7.418 0-9.249-4.62-9.249-11.295 0-7.658 2.504-11.324 10.317-11.324 2.808 0 5.31.714 7.021 1.788l-3.235 4.918c-1.038-.568-2.291-1.014-4.06-1.014-2.382 0-3.969.626-3.969 5.811 0 4.977.947 6.228 3.726 6.228 2.976 0 2.898-1.076 2.898-3.516v-.386h-3.899zM74.92 6.494h-9.096v2.892h6.704l-.73 5.243h-5.974v3.31h9.096v5.244H59.902V1.1H74.92v5.394z">
+                </path>
+              </svg>
+            </svg>
+            <div id="funding-btn">
+              <a class="btn" href="https://www.indiegogo.com/projects/oppy" target="_blank">Back our project</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -320,7 +362,7 @@
           </div>
           <input name="_subject" type="hidden" value="Contact Form"/>
           <div class="g-recaptcha" data-theme="dark" id="reCAPTCHA"></div>
-          <input class="form-input" id="contactFormButton" type="submit" value="Send">
+          <input class="btn" type="submit" value="Send">
           <p id="contactFormStatus"></p>
         </form>
         <img alt="Contact" src="./src/images/contact/contact.svg">
